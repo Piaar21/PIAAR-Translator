@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF4A89673062312700A700AB /* PIAAR_TranslatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */; };
+		EF4A89693062312700A700AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89683062312700A700AB /* ContentView.swift */; };
+		EF4A896B3062312900A700AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4A896A3062312900A700AB /* Assets.xcassets */; };
+		EF4A896F3062312900A700AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4A896E3062312900A700AB /* Preview Assets.xcassets */; };
+		EF4A89793062312900A700AB /* PIAAR_TranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89783062312900A700AB /* PIAAR_TranslatorTests.swift */; };
+		EF4A89833062312900A700AB /* PIAAR_TranslatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89823062312900A700AB /* PIAAR_TranslatorUITests.swift */; };
+		EF4A89853062312900A700AB /* PIAAR_TranslatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89843062312900A700AB /* PIAAR_TranslatorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF4A89753062312900A700AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4A895B3062312700A700AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4A89623062312700A700AB;
+			remoteInfo = "PIAAR Translator";
+		};
+		EF4A897F3062312900A700AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4A895B3062312700A700AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4A89623062312700A700AB;
+			remoteInfo = "PIAAR Translator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF4A89633062312700A700AB /* PIAAR Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PIAAR Translator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAAR_TranslatorApp.swift; sourceTree = "<group>"; };
+		EF4A89683062312700A700AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF4A896A3062312900A700AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF4A896C3062312900A700AB /* PIAAR_Translator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PIAAR_Translator.entitlements; sourceTree = "<group>"; };
+		EF4A896E3062312900A700AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF4A89743062312900A700AB /* PIAAR TranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIAAR TranslatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4A89783062312900A700AB /* PIAAR_TranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAAR_TranslatorTests.swift; sourceTree = "<group>"; };
+		EF4A897E3062312900A700AB /* PIAAR TranslatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIAAR TranslatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4A89823062312900A700AB /* PIAAR_TranslatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAAR_TranslatorUITests.swift; sourceTree = "<group>"; };
+		EF4A89843062312900A700AB /* PIAAR_TranslatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAAR_TranslatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF4A89603062312700A700AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4A89713062312900A700AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4A897B3062312900A700AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF4A895A3062312700A700AB = {
+			isa = PBXGroup;
+			children = (
+				EF4A89653062312700A700AB /* PIAAR Translator */,
+				EF4A89773062312900A700AB /* PIAAR TranslatorTests */,
+				EF4A89813062312900A700AB /* PIAAR TranslatorUITests */,
+				EF4A89643062312700A700AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF4A89643062312700A700AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A89633062312700A700AB /* PIAAR Translator.app */,
+				EF4A89743062312900A700AB /* PIAAR TranslatorTests.xctest */,
+				EF4A897E3062312900A700AB /* PIAAR TranslatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF4A89653062312700A700AB /* PIAAR Translator */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */,
+				EF4A89683062312700A700AB /* ContentView.swift */,
+				EF4A896A3062312900A700AB /* Assets.xcassets */,
+				EF4A896C3062312900A700AB /* PIAAR_Translator.entitlements */,
+				EF4A896D3062312900A700AB /* Preview Content */,
+			);
+			path = "PIAAR Translator";
+			sourceTree = "<group>";
+		};
+		EF4A896D3062312900A700AB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A896E3062312900A700AB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF4A89773062312900A700AB /* PIAAR TranslatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A89783062312900A700AB /* PIAAR_TranslatorTests.swift */,
+			);
+			path = "PIAAR TranslatorTests";
+			sourceTree = "<group>";
+		};
+		EF4A89813062312900A700AB /* PIAAR TranslatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A89823062312900A700AB /* PIAAR_TranslatorUITests.swift */,
+				EF4A89843062312900A700AB /* PIAAR_TranslatorUITestsLaunchTests.swift */,
+			);
+			path = "PIAAR TranslatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF4A89623062312700A700AB /* PIAAR Translator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4A89883062312900A700AB /* Build configuration list for PBXNativeTarget "PIAAR Translator" */;
+			buildPhases = (
+				EF4A895F3062312700A700AB /* Sources */,
+				EF4A89603062312700A700AB /* Frameworks */,
+				EF4A89613062312700A700AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PIAAR Translator";
+			productName = "PIAAR Translator";
+			productReference = EF4A89633062312700A700AB /* PIAAR Translator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF4A89733062312900A700AB /* PIAAR TranslatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4A898B3062312900A700AB /* Build configuration list for PBXNativeTarget "PIAAR TranslatorTests" */;
+			buildPhases = (
+				EF4A89703062312900A700AB /* Sources */,
+				EF4A89713062312900A700AB /* Frameworks */,
+				EF4A89723062312900A700AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF4A89763062312900A700AB /* PBXTargetDependency */,
+			);
+			name = "PIAAR TranslatorTests";
+			productName = "PIAAR TranslatorTests";
+			productReference = EF4A89743062312900A700AB /* PIAAR TranslatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF4A897D3062312900A700AB /* PIAAR TranslatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4A898E3062312900A700AB /* Build configuration list for PBXNativeTarget "PIAAR TranslatorUITests" */;
+			buildPhases = (
+				EF4A897A3062312900A700AB /* Sources */,
+				EF4A897B3062312900A700AB /* Frameworks */,
+				EF4A897C3062312900A700AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF4A89803062312900A700AB /* PBXTargetDependency */,
+			);
+			name = "PIAAR TranslatorUITests";
+			productName = "PIAAR TranslatorUITests";
+			productReference = EF4A897E3062312900A700AB /* PIAAR TranslatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF4A895B3062312700A700AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					EF4A89623062312700A700AB = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					EF4A89733062312900A700AB = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = EF4A89623062312700A700AB;
+					};
+					EF4A897D3062312900A700AB = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = EF4A89623062312700A700AB;
+					};
+				};
+			};
+			buildConfigurationList = EF4A895E3062312700A700AB /* Build configuration list for PBXProject "PIAAR Translator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF4A895A3062312700A700AB;
+			productRefGroup = EF4A89643062312700A700AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF4A89623062312700A700AB /* PIAAR Translator */,
+				EF4A89733062312900A700AB /* PIAAR TranslatorTests */,
+				EF4A897D3062312900A700AB /* PIAAR TranslatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF4A89613062312700A700AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4A896F3062312900A700AB /* Preview Assets.xcassets in Resources */,
+				EF4A896B3062312900A700AB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4A89723062312900A700AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4A897C3062312900A700AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF4A895F3062312700A700AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4A89693062312700A700AB /* ContentView.swift in Sources */,
+				EF4A89673062312700A700AB /* PIAAR_TranslatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4A89703062312900A700AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4A89793062312900A700AB /* PIAAR_TranslatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4A897A3062312900A700AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4A89853062312900A700AB /* PIAAR_TranslatorUITestsLaunchTests.swift in Sources */,
+				EF4A89833062312900A700AB /* PIAAR_TranslatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF4A89763062312900A700AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4A89623062312700A700AB /* PIAAR Translator */;
+			targetProxy = EF4A89753062312900A700AB /* PBXContainerItemProxy */;
+		};
+		EF4A89803062312900A700AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4A89623062312700A700AB /* PIAAR Translator */;
+			targetProxy = EF4A897F3062312900A700AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EF4A89863062312900A700AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF4A89873062312900A700AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EF4A89893062312900A700AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PIAAR Translator/PIAAR_Translator.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PIAAR Translator/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.piaar.PIAAR-Translator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF4A898A3062312900A700AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PIAAR Translator/PIAAR_Translator.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PIAAR Translator/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.piaar.PIAAR-Translator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF4A898C3062312900A700AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.piaar.PIAAR-TranslatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PIAAR Translator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PIAAR Translator";
+			};
+			name = Debug;
+		};
+		EF4A898D3062312900A700AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.piaar.PIAAR-TranslatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PIAAR Translator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PIAAR Translator";
+			};
+			name = Release;
+		};
+		EF4A898F3062312900A700AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.piaar.PIAAR-TranslatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PIAAR Translator";
+			};
+			name = Debug;
+		};
+		EF4A89903062312900A700AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.piaar.PIAAR-TranslatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PIAAR Translator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF4A895E3062312700A700AB /* Build configuration list for PBXProject "PIAAR Translator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4A89863062312900A700AB /* Debug */,
+				EF4A89873062312900A700AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4A89883062312900A700AB /* Build configuration list for PBXNativeTarget "PIAAR Translator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4A89893062312900A700AB /* Debug */,
+				EF4A898A3062312900A700AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4A898B3062312900A700AB /* Build configuration list for PBXNativeTarget "PIAAR TranslatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4A898C3062312900A700AB /* Debug */,
+				EF4A898D3062312900A700AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4A898E3062312900A700AB /* Build configuration list for PBXNativeTarget "PIAAR TranslatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4A898F3062312900A700AB /* Debug */,
+				EF4A89903062312900A700AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF4A895B3062312700A700AB /* Project object */;
+}
