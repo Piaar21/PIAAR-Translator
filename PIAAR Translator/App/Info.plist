@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Todo 마감일을 선택한 Apple Calendar에 등록하고 기존 연동 일정을 업데이트합니다.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Todo 마감일을 Apple Calendar와 연동합니다.</string>
+</dict>
+</plist>
