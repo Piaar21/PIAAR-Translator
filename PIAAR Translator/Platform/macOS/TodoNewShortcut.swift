@@ -84,6 +84,8 @@ struct TodoQuickInput: NSViewRepresentable {
     let cancel: () -> Void
     let newShortcut: () -> Void
     var placeholder: String = "할 일 추가"
+    var focusChanged: ((Bool) -> Void)? = nil
+    @Environment(\.workFullRows) private var full
 
     func makeNSView(context: Context) -> TodoQuickInputNSView {
         TodoQuickInputNSView()
@@ -91,6 +93,8 @@ struct TodoQuickInput: NSViewRepresentable {
 
     func updateNSView(_ view: TodoQuickInputNSView, context: Context) {
         view.placeholderString = placeholder
+        view.font = full ? .systemFont(ofSize: 15, weight: .medium) : .systemFont(ofSize: NSFont.systemFontSize)
+        view.focusChanged = focusChanged
         view.textChanged = { text = $0 }
         view.submit = submit
         view.cancel = cancel
@@ -108,6 +112,7 @@ struct TodoQuickInput: NSViewRepresentable {
 final class TodoQuickInputNSView: NSTextField, NSTextFieldDelegate {
     let shortcut = TodoShortcutNSView()
     var textChanged: ((String) -> Void)?
+    var focusChanged: ((Bool) -> Void)?
     var submit: (() -> Void)?
     var cancel: (() -> Void)?
     private var focusRevision: Int?
@@ -192,6 +197,9 @@ final class TodoQuickInputNSView: NSTextField, NSTextFieldDelegate {
     func releaseKeyboardFocus() {
         if hasKeyboardFocus { window?.makeFirstResponder(nil) }
     }
+
+    func controlTextDidBeginEditing(_ notification: Notification) { focusChanged?(true) }
+    func controlTextDidEndEditing(_ notification: Notification) { focusChanged?(false) }
 
     func controlTextDidChange(_ notification: Notification) { textChanged?(stringValue) }
 

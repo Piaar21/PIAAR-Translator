@@ -1973,3 +1973,84 @@ final class FullTodoInputAndDeadlineTests: XCTestCase {
         XCTAssertNil(session.deadlineDay)
     }
 }
+
+final class WorkSidebarTests: XCTestCase {
+    @MainActor func testDefaultSidebarIsPersonalTodos() {
+        XCTAssertEqual(WorkNavigationState().sidebarSelection, .myTodos)
+    }
+
+    @MainActor func testEverySidebarDestinationUsesTypedSelection() {
+        let navigation = WorkNavigationState()
+        navigation.select(.todo)
+        let destinations: [WorkSidebarSelection] = [.receivedTasks, .sentTasks,
+            .room(UUID()), .friends, .myTodos]
+        for destination in destinations {
+            navigation.selectSidebar(destination)
+            XCTAssertEqual(navigation.sidebarSelection, destination)
+            XCTAssertEqual(navigation.selection, .todo)
+        }
+    }
+
+    @MainActor func testMockNavigationDoesNotWritePersonalStore() throws {
+        let container = try TodoPersistence.makeContainer(inMemory: true)
+        let repo = SwiftDataTodoRepository(container: container)
+        let item = try repo.create(TodoDraft(title: "existing", date: Date()), calendar: .current)
+        let store = TodoWorkspaceStore(makeRepository: { repo })
+        store.load()
+        let model = try XCTUnwrap(store.model)
+        let navigation = WorkNavigationState()
+        for _ in 0..<3 { navigation.selectSidebar(.room(UUID())) }
+        navigation.selectSidebar(.receivedTasks)
+        navigation.selectSidebar(.sentTasks)
+        navigation.selectSidebar(.friends)
+        XCTAssertTrue(store.model === model)
+        XCTAssertEqual(try repo.allTodos().map(\.id), [item.id])
+        XCTAssertTrue(try repo.groups().isEmpty)
+        XCTAssertEqual(Set(container.schema.entities.map(\.name)),
+                       Set(["TodoItem", "TodoGroup", "TodoRepeatSchedule"]))
+    }
+
+    @MainActor func testVisibleFullRetainsSelectionAndClosedFullRestartsPersonal() throws {
+        let repo = SwiftDataTodoRepository(container: try TodoPersistence.makeContainer(inMemory: true))
+        let store = TodoWorkspaceStore(makeRepository: { repo })
+        let controller = WorkWindowController(openTranslator: {}, openSettings: {}, todoStore: store)
+        defer { controller.window?.close() }
+        controller.showTodo()
+        let model = store.model
+        controller.navigation.selectSidebar(.friends)
+        controller.showTodo()
+        XCTAssertEqual(controller.navigation.sidebarSelection, .friends)
+        controller.window?.performClose(nil)
+        controller.showTodo()
+        XCTAssertEqual(controller.navigation.sidebarSelection, .myTodos)
+        XCTAssertTrue(store.model === model)
+        XCTAssertEqual(controller.window?.contentMinSize, NSSize(width: 680, height: 420))
+    }
+
+    @MainActor func testMiniFullToggleKeepsWindowAndRepositoryAndRestoresPersonal() throws {
+        let repo = SwiftDataTodoRepository(container: try TodoPersistence.makeContainer(inMemory: true))
+        let store = TodoWorkspaceStore(makeRepository: { repo })
+        let coordinator = WorkWindowCoordinator(makeController: {
+            WorkWindowController(openTranslator: {}, openSettings: {}, todoStore: store)
+        })
+        defer {
+            coordinator.controller?.window?.close()
+            coordinator.miniController?.window?.close()
+        }
+        coordinator.handleTodoHotKey()
+        XCTAssertTrue(coordinator.miniController?.window?.isVisible == true)
+        XCTAssertFalse(coordinator.controller?.window?.isVisible == true)
+        coordinator.handleTodoHotKey()
+        let full = try XCTUnwrap(coordinator.controller)
+        XCTAssertTrue(full.window?.isVisible == true)
+        XCTAssertEqual(full.navigation.sidebarSelection, .myTodos)
+        full.navigation.selectSidebar(.receivedTasks)
+        coordinator.handleTodoHotKey()
+        XCTAssertTrue(coordinator.miniController?.window?.isVisible == true)
+        XCTAssertFalse(full.window?.isVisible == true)
+        coordinator.handleTodoHotKey()
+        XCTAssertTrue(coordinator.controller === full)
+        XCTAssertEqual(full.navigation.sidebarSelection, .myTodos)
+        XCTAssertTrue(full.sharedTodoStore === store)
+    }
+}

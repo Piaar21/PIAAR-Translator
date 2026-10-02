@@ -4,10 +4,16 @@ import AppKit
 // Both windows observe the same model; no separate Mini storage or draft.
 struct TodayTodoView: View {
     @ObservedObject var model: TodoViewModel
+    @ObservedObject var sharedTasks: SharedTasksViewModel
     let isMini: Bool
     var closeMini: () -> Void = {}
     @Environment(\.scenePhase) private var scenePhase
     private let refreshTimer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+
+    private var listItems: [TodayListItem] {
+        TodayListItem.combined(personal: model.todayItems,
+            received: sharedTasks.assigned(on: model.todayDate, calendar: model.calendar))
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -32,7 +38,7 @@ struct TodayTodoView: View {
                 Text(error).font(.caption).foregroundStyle(.secondary)
                     .textSelection(.enabled)
             }
-            if model.todayItems.isEmpty {
+            if listItems.isEmpty {
                 Text("오늘 할 일이 없습니다.")
                     .font(.subheadline).foregroundStyle(.secondary)
                     .padding(.top, 10)
@@ -40,8 +46,13 @@ struct TodayTodoView: View {
             } else {
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: 12) {
-                        ForEach(model.todayItems) { item in
-                            TodoRowView(model: model, item: item, showMoreButton: false)
+                        ForEach(listItems) { item in
+                            switch item {
+                            case .personalTodo(let todo):
+                                TodoRowView(model: model, item: todo, showMoreButton: false)
+                            case .receivedTask(let task):
+                                ReceivedTaskRow(model: sharedTasks, task: task, compact: true)
+                            }
                         }
                     }.padding(.vertical, 4)
                 }
@@ -50,6 +61,7 @@ struct TodayTodoView: View {
         .padding(isMini ? 18 : 24)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(nsColor: .windowBackgroundColor))
+        .task { await sharedTasks.load() }
         .onAppear { model.refresh() }
         .onReceive(refreshTimer) { _ in model.refresh() }
         .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in model.refresh() }

@@ -7,6 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00BAE658BDF3482AB5FE0F1D /* WorkRoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA58A45A7744659B61DDB1 /* WorkRoomsViewModel.swift */; };
+		03A7A1FEBA704991B4C8E6D0 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FA1EE32204B758B597E9F /* FriendRepository.swift */; };
+		045CEACF5C954869BAC69B1E /* SharedTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4D3155BA349AFAE92F9F1 /* SharedTaskTests.swift */; };
+		0C605FCE1EB078CCB448332A /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */; };
+		168278CB4FF3B9425AB40FD2 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808446524397CAA5D62A899 /* TodoTests.swift */; };
+		1D901ADD6EC710C4F1154147 /* TodoPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */; };
+		1F3CC7931085FC2E2A975D47 /* TodoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */; };
+		24A098F88075438586B9C4E9 /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306ACF6B56B74F9C96BBFD3F /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift */; };
+		251C24BE4CCF7434B89AF20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06491D92B9AB7FDD2809936 /* AppDelegate.swift */; };
+		2805C6C78C354C268281D76F /* FriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3CBACE1CFA4D308F28DE1B /* FriendTests.swift */; };
+		29F418443B02965E6E06CFBB /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF575956EF16FDB7F800F027 /* TodoRepository.swift */; };
+		2A47BF67F37040E0BB023E93 /* MockCollaborationEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06560AA6472C988619F1 /* MockCollaborationEnvironment.swift */; };
+		362AD9DADDAC4E2883A78572 /* WorkRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D55137CD44A9E967DE0A3 /* WorkRoomTests.swift */; };
+		3694789CA17D4459AB3AE721 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADC01DF7444698DEDDD87 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift */; };
+		3AF77432C462CD3D8E785AC0 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186566449599D9C9DC5A64A2 /* StatusBarController.swift */; };
+		3F74324BF6D9557F5E7D890E /* TranslatorLauncherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */; };
+		437FD1B3404F4A39E61F7E38 /* TodoWorkspaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */; };
+		604D3A4E16454E648D273180 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55310B590028411C93A27A64 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift */; };
+		82DCBA9EF5D660B573B61D1A /* DualHotKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */; };
+		87E2C8024D044BF7925773A8 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842057DFF29412F809DB931 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift */; };
+		93336F0871284D76AAFF79F5 /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB6D638AD34561B632E6AA /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift */; };
+		947B6FE6C3804C0D89DFD5DF /* WorkRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4414B55414F17BD73AAB6 /* WorkRoomRepository.swift */; };
+		982ABB2CE1274210AD04F226 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53F5DA2D1B421B8CD61009 /* FriendsViewModel.swift */; };
+		9AE977A575DB302AE2C6EAC1 /* HotKeySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */; };
+		9D08938F965D491F80E4CE4B /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CDA9D86AA044DDA713C592 /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift */; };
+		9E61CA25550DE94FC6F1A3A9 /* TodoNewShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */; };
+		A694E79797EC483E9C567199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5D950051D24D0AA816B001 /* FriendsView.swift */; };
+		A7388AA34C5340A0A90901ED /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC411AF35146C38098588B /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift */; };
+		B081E20C966450244958318D /* SwiftDataTodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */; };
+		B132D3A8B40D4C9EBD719983 /* PIAAR Translator/Models/TodoRepeatSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB26701C564E249E8391FF /* PIAAR Translator/Models/TodoRepeatSchedule.swift */; };
+		B5FEE56D2043412C8FFE232C /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F635D8491844C5B773CE8B /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift */; };
+		BDEAC717E8BF075AC3D0BB0E /* HotKeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */; };
+		BDF6250B0FB749DCB6C8F40D /* PIAAR Translator/App/WorkDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802F37F5DFB4834B0330E80 /* PIAAR Translator/App/WorkDesign.swift */; };
+		BF76D975A9B1C1F469E37727 /* TodoTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849412C993605CA3D3E7C40D /* TodoTypes.swift */; };
+		C07E3A33A2B14F93A43A2591 /* SharedTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94C8D9A06304965B1E81EC7 /* SharedTasksViewModel.swift */; };
+		D2C7015B0F9D1AD55CB55047 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */; };
+		D4B0E32D2F0B17E64F56DD72 /* WorkWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */; };
+		E4CBDFE7F6DF4637A44F2EA1 /* SharedTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102C9E672AF442A984E7585 /* SharedTaskRepository.swift */; };
+		E97F87D66D1549E4BEA3145F /* SharedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4337AFCF0441C987DCCDC /* SharedTasksView.swift */; };
+		ECE3FA46B3514FD785A98D5A /* WorkRoomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886F2FF9C0745F8AABFCC01 /* WorkRoomViews.swift */; };
+		EEC65DDA0202F42A7DECB3FD /* HotKeySettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */; };
 		EF4A89673062312700A700AB /* PIAAR_TranslatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */; };
 		EF4A89693062312700A700AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89683062312700A700AB /* ContentView.swift */; };
 		EF4A896B3062312900A700AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4A896A3062312900A700AB /* Assets.xcassets */; };
@@ -20,32 +61,7 @@
 		EFC12C34306255E200AEEB34 /* GlobalHotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC12C33306255E200AEEB34 /* GlobalHotKeyManager.swift */; };
 		EFC12C36306259E800AEEB34 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC12C35306259E800AEEB34 /* LaunchAtLoginManager.swift */; };
 		F62AE2781B6A6E9950CA504F /* WorkMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B744C52EB6A69E34464BA /* WorkMainView.swift */; };
-		BDEAC717E8BF075AC3D0BB0E /* HotKeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */; };
-		9AE977A575DB302AE2C6EAC1 /* HotKeySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */; };
-		EEC65DDA0202F42A7DECB3FD /* HotKeySettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */; };
-		3F74324BF6D9557F5E7D890E /* TranslatorLauncherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */; };
-		251C24BE4CCF7434B89AF20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06491D92B9AB7FDD2809936 /* AppDelegate.swift */; };
-		3AF77432C462CD3D8E785AC0 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186566449599D9C9DC5A64A2 /* StatusBarController.swift */; };
-		D4B0E32D2F0B17E64F56DD72 /* WorkWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */; };
-		29F418443B02965E6E06CFBB /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF575956EF16FDB7F800F027 /* TodoRepository.swift */; };
-		BF76D975A9B1C1F469E37727 /* TodoTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849412C993605CA3D3E7C40D /* TodoTypes.swift */; };
-		0C605FCE1EB078CCB448332A /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */; };
-		437FD1B3404F4A39E61F7E38 /* TodoWorkspaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */; };
-		1F3CC7931085FC2E2A975D47 /* TodoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */; };
-		D2C7015B0F9D1AD55CB55047 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */; };
-		9E61CA25550DE94FC6F1A3A9 /* TodoNewShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */; };
-		B081E20C966450244958318D /* SwiftDataTodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */; };
-		1D901ADD6EC710C4F1154147 /* TodoPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */; };
-		168278CB4FF3B9425AB40FD2 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808446524397CAA5D62A899 /* TodoTests.swift */; };
-		82DCBA9EF5D660B573B61D1A /* DualHotKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */; };
-		3694789CA17D4459AB3AE721 /* TodayTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADC01DF7444698DEDDD87 /* TodayTodoView.swift */; };
-		604D3A4E16454E648D273180 /* MiniTodoWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55310B590028411C93A27A64 /* MiniTodoWindowController.swift */; };
-		B132D3A8B40D4C9EBD719983 /* TodoRepeatSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB26701C564E249E8391FF /* TodoRepeatSchedule.swift */; };
-		93336F0871284D76AAFF79F5 /* TodoManagementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB6D638AD34561B632E6AA /* TodoManagementTypes.swift */; };
-		87E2C8024D044BF7925773A8 /* FullTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842057DFF29412F809DB931 /* FullTodoView.swift */; };
-		9D08938F965D491F80E4CE4B /* TodoCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CDA9D86AA044DDA713C592 /* TodoCalendarService.swift */; };
-		A7388AA34C5340A0A90901ED /* TodoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC411AF35146C38098588B; };
-		24A098F88075438586B9C4E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306ACF6B56B74F9C96BBFD3F; };
+		FAE0AE89FF3B49BCB276CBAD /* CloudKitAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EB11C55BC4B839DB3404F; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +75,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F635D8491844C5B773CE8B /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/MissedTodoPresentation.swift"; sourceTree = SOURCE_ROOT; };
+		055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPersistence.swift; sourceTree = "<group>"; };
+		0802F37F5DFB4834B0330E80 /* PIAAR Translator/App/WorkDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/App/WorkDesign.swift"; sourceTree = SOURCE_ROOT; };
+		0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoNewShortcut.swift; sourceTree = "<group>"; };
+		186566449599D9C9DC5A64A2 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		1BA4414B55414F17BD73AAB6 /* WorkRoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomRepository.swift; sourceTree = "<group>"; };
+		1E5D950051D24D0AA816B001 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		21CDA9D86AA044DDA713C592 /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Platform/macOS/TodoCalendarService.swift"; sourceTree = SOURCE_ROOT; };
+		306ACF6B56B74F9C96BBFD3F /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodoRowView.swift"; sourceTree = SOURCE_ROOT; };
+		3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		32EB26701C564E249E8391FF /* PIAAR Translator/Models/TodoRepeatSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Models/TodoRepeatSchedule.swift"; sourceTree = SOURCE_ROOT; };
+		3842057DFF29412F809DB931 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/FullTodoView.swift"; sourceTree = SOURCE_ROOT; };
+		398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyRecorderView.swift; sourceTree = "<group>"; };
+		4DFC411AF35146C38098588B /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodoEditorView.swift"; sourceTree = SOURCE_ROOT; };
+		4F3CBACE1CFA4D308F28DE1B /* FriendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTests.swift; sourceTree = "<group>"; };
+		5102C9E672AF442A984E7585 /* SharedTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTaskRepository.swift; sourceTree = "<group>"; };
+		55310B590028411C93A27A64 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift"; sourceTree = SOURCE_ROOT; };
+		734B744C52EB6A69E34464BA /* WorkMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkMainView.swift; sourceTree = "<group>"; };
+		7808446524397CAA5D62A899 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
+		7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWorkspaceStore.swift; sourceTree = "<group>"; };
+		82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualHotKeyTests.swift; sourceTree = "<group>"; };
+		849412C993605CA3D3E7C40D /* TodoTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTypes.swift; sourceTree = "<group>"; };
+		84F4337AFCF0441C987DCCDC /* SharedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTasksView.swift; sourceTree = "<group>"; };
+		8886F2FF9C0745F8AABFCC01 /* WorkRoomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomViews.swift; sourceTree = "<group>"; };
+		88B4D3155BA349AFAE92F9F1 /* SharedTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTaskTests.swift; sourceTree = "<group>"; };
+		9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTodoRepository.swift; sourceTree = "<group>"; };
+		9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWindowController.swift; sourceTree = "<group>"; };
+		A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeySettingsWindowController.swift; sourceTree = "<group>"; };
+		AF5FA1EE32204B758B597E9F /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		B28D55137CD44A9E967DE0A3 /* WorkRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomTests.swift; sourceTree = "<group>"; };
+		B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoGroup.swift; sourceTree = "<group>"; };
+		BA53F5DA2D1B421B8CD61009 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		C0DA58A45A7744659B61DDB1 /* WorkRoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomsViewModel.swift; sourceTree = "<group>"; };
+		C66ADC01DF7444698DEDDD87 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodayTodoView.swift"; sourceTree = SOURCE_ROOT; };
+		C94C8D9A06304965B1E81EC7 /* SharedTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTasksViewModel.swift; sourceTree = "<group>"; };
+		CCED06560AA6472C988619F1 /* MockCollaborationEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollaborationEnvironment.swift; sourceTree = "<group>"; };
+		D06491D92B9AB7FDD2809936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeySettingsView.swift; sourceTree = "<group>"; };
+		D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorLauncherView.swift; sourceTree = "<group>"; };
+		DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		E8CB6D638AD34561B632E6AA /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/TodoManagementTypes.swift"; sourceTree = SOURCE_ROOT; };
 		EF4A89633062312700A700AB /* PIAAR Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PIAAR Translator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAAR_TranslatorApp.swift; sourceTree = "<group>"; };
 		EF4A89683062312700A700AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,36 +128,11 @@
 		EF4A8993306231DB00A700AB /* TranslatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewModel.swift; sourceTree = "<group>"; };
 		EF4A8995306233B400A700AB /* PopupWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindowController.swift; sourceTree = "<group>"; };
 		EF4A899730623CB000A700AB /* PIAARTerminology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAARTerminology.swift; sourceTree = "<group>"; };
+		EF575956EF16FDB7F800F027 /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
 		EF92EB7430625F7F008F0A36 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		EFC12C33306255E200AEEB34 /* GlobalHotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKeyManager.swift; sourceTree = "<group>"; };
 		EFC12C35306259E800AEEB34 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
-		734B744C52EB6A69E34464BA /* WorkMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkMainView.swift; sourceTree = "<group>"; };
-		398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyRecorderView.swift; sourceTree = "<group>"; };
-		D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeySettingsView.swift; sourceTree = "<group>"; };
-		A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeySettingsWindowController.swift; sourceTree = "<group>"; };
-		D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorLauncherView.swift; sourceTree = "<group>"; };
-		D06491D92B9AB7FDD2809936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		186566449599D9C9DC5A64A2 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
-		9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWindowController.swift; sourceTree = "<group>"; };
-		EF575956EF16FDB7F800F027 /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
-		849412C993605CA3D3E7C40D /* TodoTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTypes.swift; sourceTree = "<group>"; };
-		DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
-		7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWorkspaceStore.swift; sourceTree = "<group>"; };
-		B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoGroup.swift; sourceTree = "<group>"; };
-		3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoNewShortcut.swift; sourceTree = "<group>"; };
-		9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTodoRepository.swift; sourceTree = "<group>"; };
-		055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPersistence.swift; sourceTree = "<group>"; };
-		7808446524397CAA5D62A899 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
-		82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualHotKeyTests.swift; sourceTree = "<group>"; };
-		C66ADC01DF7444698DEDDD87 /* TodayTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodayTodoView.swift"; sourceTree = SOURCE_ROOT; };
-		55310B590028411C93A27A64 /* MiniTodoWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift"; sourceTree = SOURCE_ROOT; };
-		32EB26701C564E249E8391FF /* TodoRepeatSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Models/TodoRepeatSchedule.swift"; sourceTree = SOURCE_ROOT; };
-		E8CB6D638AD34561B632E6AA /* TodoManagementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/TodoManagementTypes.swift"; sourceTree = SOURCE_ROOT; };
-		3842057DFF29412F809DB931 /* FullTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/FullTodoView.swift"; sourceTree = SOURCE_ROOT; };
-		21CDA9D86AA044DDA713C592 /* TodoCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Platform/macOS/TodoCalendarService.swift"; sourceTree = SOURCE_ROOT; };
-		4DFC411AF35146C38098588B /* TodoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodoEditorView.swift"; sourceTree = SOURCE_ROOT; };
-		306ACF6B56B74F9C96BBFD3F /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodoRowView.swift"; sourceTree = SOURCE_ROOT; };
+		635EB11C55BC4B839DB3404F /* CloudKitAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Sync/CloudKitAccountService.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +153,202 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B80411990647123A24C030 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		094FC1E1AE2428AE38ADC205 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */,
+				B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A2F0F65CBB2F5C9CAFBEB25 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */,
+				9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		48175333EBF9463CB37A2126 /* AppIntents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppIntents;
+			sourceTree = "<group>";
+		};
+		4A3D50803858A7C87EBE6AE4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E4A7320F9260FE5E5A518D13 /* Settings */,
+				CF2AEDAA925E4F2DBED9C6EB /* WorkRooms */,
+				8B7564C6CB9F4DC984DCF52D /* SharedTasks */,
+				7DC011FAFD434D96BA5E92AE /* Friends */,
+				784B6D9316FBF2F253C8AE52 /* Todo */,
+				DC353CCCEBABE224B9709EDF /* Translator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4D8B7E206657EF4857939A85 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				635EB11C55BC4B839DB3404F /* CloudKitAccountService.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		55F531BE2A4BD3A3E0DB80FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A89683062312700A700AB /* ContentView.swift */,
+				D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76F71C934BB3AC52598788CE /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */,
+				D06491D92B9AB7FDD2809936 /* AppDelegate.swift */,
+				EFC12C33306255E200AEEB34 /* GlobalHotKeyManager.swift */,
+				EFC12C35306259E800AEEB34 /* LaunchAtLoginManager.swift */,
+				EF4A8995306233B400A700AB /* PopupWindowController.swift */,
+				186566449599D9C9DC5A64A2 /* StatusBarController.swift */,
+				9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		784B6D9316FBF2F253C8AE52 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				01B80411990647123A24C030 /* Views */,
+				7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */,
+				DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */,
+				02F635D8491844C5B773CE8B /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift */,
+				849412C993605CA3D3E7C40D /* TodoTypes.swift */,
+				EF575956EF16FDB7F800F027 /* TodoRepository.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		7DC011FAFD434D96BA5E92AE /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FA1EE32204B758B597E9F /* FriendRepository.swift */,
+				BA53F5DA2D1B421B8CD61009 /* FriendsViewModel.swift */,
+				1E5D950051D24D0AA816B001 /* FriendsView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		8B7564C6CB9F4DC984DCF52D /* SharedTasks */ = {
+			isa = PBXGroup;
+			children = (
+				5102C9E672AF442A984E7585 /* SharedTaskRepository.swift */,
+				C94C8D9A06304965B1E81EC7 /* SharedTasksViewModel.swift */,
+				84F4337AFCF0441C987DCCDC /* SharedTasksView.swift */,
+			);
+			path = SharedTasks;
+			sourceTree = "<group>";
+		};
+		8BD83D3DC6B11C01F57BA872 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				48175333EBF9463CB37A2126 /* AppIntents */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		92DE66399580EE66BC82E855 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				EF92EB7430625F7F008F0A36 /* KeychainManager.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		AA6FE9CEA8009059BEE5B5AA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */,
+				734B744C52EB6A69E34464BA /* WorkMainView.swift */,
+				0802F37F5DFB4834B0330E80 /* PIAAR Translator/App/WorkDesign.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CDD95A59A785FFF092365703 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				76F71C934BB3AC52598788CE /* macOS */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		CF2AEDAA925E4F2DBED9C6EB /* WorkRooms */ = {
+			isa = PBXGroup;
+			children = (
+				1BA4414B55414F17BD73AAB6 /* WorkRoomRepository.swift */,
+				C0DA58A45A7744659B61DDB1 /* WorkRoomsViewModel.swift */,
+				8886F2FF9C0745F8AABFCC01 /* WorkRoomViews.swift */,
+				CCED06560AA6472C988619F1 /* MockCollaborationEnvironment.swift */,
+			);
+			path = WorkRooms;
+			sourceTree = "<group>";
+		};
+		DC353CCCEBABE224B9709EDF /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				55F531BE2A4BD3A3E0DB80FB /* Views */,
+				EF4A8991306231C700A700AB /* OpenAIService.swift */,
+				EF4A899730623CB000A700AB /* PIAARTerminology.swift */,
+				EF4A8993306231DB00A700AB /* TranslatorViewModel.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		E4A7320F9260FE5E5A518D13 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */,
+				D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */,
+				A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E9DDE29AC48D1F95C448FAF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A2F0F65CBB2F5C9CAFBEB25 /* Persistence */,
+				92DE66399580EE66BC82E855 /* Security */,
+				4D8B7E206657EF4857939A85 /* Sync */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EF4A895A3062312700A700AB = {
 			isa = PBXGroup;
 			children = (
-                306ACF6B56B74F9C96BBFD3F /* TodoRowView.swift */,
-                4DFC411AF35146C38098588B /* TodoEditorView.swift */,
-                21CDA9D86AA044DDA713C592 /* TodoCalendarService.swift */,
-                3842057DFF29412F809DB931 /* FullTodoView.swift */,
-                E8CB6D638AD34561B632E6AA /* TodoManagementTypes.swift */,
-                32EB26701C564E249E8391FF /* TodoRepeatSchedule.swift */,
-				55310B590028411C93A27A64 /* MiniTodoWindowController.swift */,
-				C66ADC01DF7444698DEDDD87 /* TodayTodoView.swift */,
+				306ACF6B56B74F9C96BBFD3F /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift */,
+				4DFC411AF35146C38098588B /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift */,
+				21CDA9D86AA044DDA713C592 /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift */,
+				3842057DFF29412F809DB931 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift */,
+				E8CB6D638AD34561B632E6AA /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift */,
+				32EB26701C564E249E8391FF /* PIAAR Translator/Models/TodoRepeatSchedule.swift */,
+				55310B590028411C93A27A64 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift */,
+				C66ADC01DF7444698DEDDD87 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift */,
 				EF4A89653062312700A700AB /* PIAAR Translator */,
 				EF4A89773062312900A700AB /* PIAAR TranslatorTests */,
 				EF4A89643062312700A700AB /* Products */,
@@ -176,160 +393,12 @@
 			children = (
 				82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */,
 				7808446524397CAA5D62A899 /* TodoTests.swift */,
+				B28D55137CD44A9E967DE0A3 /* WorkRoomTests.swift */,
+				88B4D3155BA349AFAE92F9F1 /* SharedTaskTests.swift */,
+				4F3CBACE1CFA4D308F28DE1B /* FriendTests.swift */,
 				EF4A89783062312900A700AB /* PIAAR_TranslatorTests.swift */,
 			);
 			path = "PIAAR TranslatorTests";
-			sourceTree = "<group>";
-		};
-		AA6FE9CEA8009059BEE5B5AA /* App */ = {
-			isa = PBXGroup;
-			children = (
-				EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */,
-				734B744C52EB6A69E34464BA /* WorkMainView.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		4A3D50803858A7C87EBE6AE4 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				E4A7320F9260FE5E5A518D13 /* Settings */,
-				784B6D9316FBF2F253C8AE52 /* Todo */,
-				DC353CCCEBABE224B9709EDF /* Translator */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		E4A7320F9260FE5E5A518D13 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */,
-				D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */,
-				A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		784B6D9316FBF2F253C8AE52 /* Todo */ = {
-			isa = PBXGroup;
-			children = (
-				01B80411990647123A24C030 /* Views */,
-				7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */,
-				DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */,
-				849412C993605CA3D3E7C40D /* TodoTypes.swift */,
-				EF575956EF16FDB7F800F027 /* TodoRepository.swift */,
-			);
-			path = Todo;
-			sourceTree = "<group>";
-		};
-		DC353CCCEBABE224B9709EDF /* Translator */ = {
-			isa = PBXGroup;
-			children = (
-				55F531BE2A4BD3A3E0DB80FB /* Views */,
-				EF4A8991306231C700A700AB /* OpenAIService.swift */,
-				EF4A899730623CB000A700AB /* PIAARTerminology.swift */,
-				EF4A8993306231DB00A700AB /* TranslatorViewModel.swift */,
-			);
-			path = Translator;
-			sourceTree = "<group>";
-		};
-		55F531BE2A4BD3A3E0DB80FB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				EF4A89683062312700A700AB /* ContentView.swift */,
-				D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CDD95A59A785FFF092365703 /* Platform */ = {
-			isa = PBXGroup;
-			children = (
-				76F71C934BB3AC52598788CE /* macOS */,
-			);
-			path = Platform;
-			sourceTree = "<group>";
-		};
-		76F71C934BB3AC52598788CE /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */,
-				D06491D92B9AB7FDD2809936 /* AppDelegate.swift */,
-				EFC12C33306255E200AEEB34 /* GlobalHotKeyManager.swift */,
-				EFC12C35306259E800AEEB34 /* LaunchAtLoginManager.swift */,
-				EF4A8995306233B400A700AB /* PopupWindowController.swift */,
-				186566449599D9C9DC5A64A2 /* StatusBarController.swift */,
-				9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		E9DDE29AC48D1F95C448FAF3 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				3A2F0F65CBB2F5C9CAFBEB25 /* Persistence */,
-				92DE66399580EE66BC82E855 /* Security */,
-				4D8B7E206657EF4857939A85 /* Sync */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		3A2F0F65CBB2F5C9CAFBEB25 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */,
-				9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */,
-
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		92DE66399580EE66BC82E855 /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				EF92EB7430625F7F008F0A36 /* KeychainManager.swift */,
-			);
-			path = Security;
-			sourceTree = "<group>";
-		};
-		4D8B7E206657EF4857939A85 /* Sync */ = {
-			isa = PBXGroup;
-			children = (
-
-			);
-			path = Sync;
-			sourceTree = "<group>";
-		};
-		8BD83D3DC6B11C01F57BA872 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				48175333EBF9463CB37A2126 /* AppIntents */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		48175333EBF9463CB37A2126 /* AppIntents */ = {
-			isa = PBXGroup;
-			children = (
-
-			);
-			path = AppIntents;
-			sourceTree = "<group>";
-		};
-		01B80411990647123A24C030 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		094FC1E1AE2428AE38ADC205 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */,
-				B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +508,7 @@
 				1F3CC7931085FC2E2A975D47 /* TodoGroup.swift in Sources */,
 				437FD1B3404F4A39E61F7E38 /* TodoWorkspaceStore.swift in Sources */,
 				0C605FCE1EB078CCB448332A /* TodoViewModel.swift in Sources */,
+				B5FEE56D2043412C8FFE232C /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift in Sources */,
 				BF76D975A9B1C1F469E37727 /* TodoTypes.swift in Sources */,
 				29F418443B02965E6E06CFBB /* TodoRepository.swift in Sources */,
 				EF4A8996306233B400A700AB /* PopupWindowController.swift in Sources */,
@@ -451,6 +521,17 @@
 				EFC12C34306255E200AEEB34 /* GlobalHotKeyManager.swift in Sources */,
 				EF4A8992306231C700A700AB /* OpenAIService.swift in Sources */,
 				F62AE2781B6A6E9950CA504F /* WorkMainView.swift in Sources */,
+				BDF6250B0FB749DCB6C8F40D /* PIAAR Translator/App/WorkDesign.swift in Sources */,
+				2A47BF67F37040E0BB023E93 /* MockCollaborationEnvironment.swift in Sources */,
+				ECE3FA46B3514FD785A98D5A /* WorkRoomViews.swift in Sources */,
+				00BAE658BDF3482AB5FE0F1D /* WorkRoomsViewModel.swift in Sources */,
+				947B6FE6C3804C0D89DFD5DF /* WorkRoomRepository.swift in Sources */,
+				E97F87D66D1549E4BEA3145F /* SharedTasksView.swift in Sources */,
+				C07E3A33A2B14F93A43A2591 /* SharedTasksViewModel.swift in Sources */,
+				E4CBDFE7F6DF4637A44F2EA1 /* SharedTaskRepository.swift in Sources */,
+				A694E79797EC483E9C567199 /* FriendsView.swift in Sources */,
+				982ABB2CE1274210AD04F226 /* FriendsViewModel.swift in Sources */,
+				03A7A1FEBA704991B4C8E6D0 /* FriendRepository.swift in Sources */,
 				BDEAC717E8BF075AC3D0BB0E /* HotKeyRecorderView.swift in Sources */,
 				9AE977A575DB302AE2C6EAC1 /* HotKeySettingsView.swift in Sources */,
 				EEC65DDA0202F42A7DECB3FD /* HotKeySettingsWindowController.swift in Sources */,
@@ -458,14 +539,15 @@
 				251C24BE4CCF7434B89AF20E /* AppDelegate.swift in Sources */,
 				3AF77432C462CD3D8E785AC0 /* StatusBarController.swift in Sources */,
 				D4B0E32D2F0B17E64F56DD72 /* WorkWindowController.swift in Sources */,
-				604D3A4E16454E648D273180 /* MiniTodoWindowController.swift in Sources */,
-				3694789CA17D4459AB3AE721 /* TodayTodoView.swift in Sources */,
-                24A098F88075438586B9C4E9 /* TodoRowView.swift in Sources */,
-                A7388AA34C5340A0A90901ED /* TodoEditorView.swift in Sources */,
-                9D08938F965D491F80E4CE4B /* TodoCalendarService.swift in Sources */,
-                87E2C8024D044BF7925773A8 /* FullTodoView.swift in Sources */,
-                93336F0871284D76AAFF79F5 /* TodoManagementTypes.swift in Sources */,
-                B132D3A8B40D4C9EBD719983 /* TodoRepeatSchedule.swift in Sources */,
+				604D3A4E16454E648D273180 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift in Sources */,
+				3694789CA17D4459AB3AE721 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift in Sources */,
+				24A098F88075438586B9C4E9 /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift in Sources */,
+				A7388AA34C5340A0A90901ED /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift in Sources */,
+				9D08938F965D491F80E4CE4B /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift in Sources */,
+				FAE0AE89FF3B49BCB276CBAD /* CloudKitAccountService.swift in Sources */,
+				87E2C8024D044BF7925773A8 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift in Sources */,
+				93336F0871284D76AAFF79F5 /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift in Sources */,
+				B132D3A8B40D4C9EBD719983 /* PIAAR Translator/Models/TodoRepeatSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +557,9 @@
 			files = (
 				82DCBA9EF5D660B573B61D1A /* DualHotKeyTests.swift in Sources */,
 				168278CB4FF3B9425AB40FD2 /* TodoTests.swift in Sources */,
+				362AD9DADDAC4E2883A78572 /* WorkRoomTests.swift in Sources */,
+				045CEACF5C954869BAC69B1E /* SharedTaskTests.swift in Sources */,
+				2805C6C78C354C268281D76F /* FriendTests.swift in Sources */,
 				EF4A89793062312900A700AB /* PIAAR_TranslatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,7 +703,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PIAAR Translator/App/Info.plist";
-                INFOPLIST_KEY_CFBundleDisplayName = "PIAAR Work";
+				INFOPLIST_KEY_CFBundleDisplayName = "PIAAR Work";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -658,7 +743,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PIAAR Translator/App/Info.plist";
-                INFOPLIST_KEY_CFBundleDisplayName = "PIAAR Work";
+				INFOPLIST_KEY_CFBundleDisplayName = "PIAAR Work";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

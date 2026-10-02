@@ -7,13 +7,16 @@ import OSLog
 final class TodoWorkspaceStore: ObservableObject {
     @Published private(set) var model: TodoViewModel?
     @Published private(set) var initializationError: String?
+    lazy var collaboration = CollaborationWorkspace()
     private let makeRepository: @MainActor () throws -> TodoRepository
     private let logger = Logger(subsystem: "com.piaar.PIAAR-Translator", category: "TodoPersistence")
 
-    init(makeRepository: (@MainActor () throws -> TodoRepository)? = nil) {
+    init(makeRepository: (@MainActor () throws -> TodoRepository)? = nil,
+         collaboration: CollaborationWorkspace? = nil) {
         self.makeRepository = makeRepository ?? {
             SwiftDataTodoRepository(container: try TodoPersistence.makeContainer())
         }
+        if let collaboration { self.collaboration = collaboration }
     }
 
     func load() {

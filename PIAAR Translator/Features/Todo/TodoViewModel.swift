@@ -18,6 +18,7 @@ final class TodoViewModel: ObservableObject {
     @Published private(set) var quickWantsFocus = false
     @Published private(set) var fullDate: Date = Date()
     @Published private(set) var fullItems: [TodoSnapshot] = []
+    @Published private(set) var pastIncomplete: [TodoSnapshot] = []
     @Published private(set) var overdueDays: Set<Date> = []
     @Published private(set) var calendarOptions: [TodoCalendarOption] = []
     @Published private(set) var calendarBusy = false
@@ -403,6 +404,7 @@ final class TodoViewModel: ObservableObject {
         if followsToday { fullDate = interval.start }
         let fullInterval = TodoDates.interval(for: fullDate, calendar: calendar)
         fullItems = TodoDates.sorted(all.filter { $0.date >= fullInterval.start && $0.date < fullInterval.end })
+        pastIncomplete = all.filter { !$0.isCompleted && $0.date < interval.start }
         overdueDays = Set(all.filter { !$0.isCompleted && $0.date < interval.start }
             .map { calendar.startOfDay(for: $0.date) })
         let oldIndex = items.firstIndex { $0.id == selectedID } ?? 0

@@ -11,14 +11,14 @@ final class WorkWindowController: NSWindowController, NSWindowDelegate {
          todoStore: TodoWorkspaceStore? = nil) {
         self.todoStore = todoStore ?? TodoWorkspaceStore()
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 560, height: 560),
+            contentRect: NSRect(x: 0, y: 0, width: 780, height: 600),
             styleMask: [.titled, .closable, .miniaturizable, .resizable],
             backing: .buffered,
             defer: false
         )
         window.title = "PIAAR Work"
         window.isReleasedWhenClosed = false
-        window.contentMinSize = NSSize(width: 420, height: 360)
+        window.contentMinSize = NSSize(width: 680, height: 420)
         window.contentViewController = NSHostingController(rootView: WorkMainView(
             navigation: navigation,
             todoStore: self.todoStore,
@@ -27,7 +27,7 @@ final class WorkWindowController: NSWindowController, NSWindowDelegate {
         ))
         // Hosting content initially sizes itself to its minimum; establish the
         // intended default before restoring a user's saved frame.
-        window.setContentSize(NSSize(width: 560, height: 560))
+        window.setContentSize(NSSize(width: 780, height: 600))
         window.setFrameAutosaveName("PIAARWorkTodoWindow")
         if !window.setFrameUsingName("PIAARWorkTodoWindow") { window.center() }
         super.init(window: window)
@@ -48,6 +48,11 @@ final class WorkWindowController: NSWindowController, NSWindowDelegate {
 
     func showTodo() {
         navigation.select(.todo)
+        // Reopening Full (including Mini → Full) starts at personal Todos.
+        // Leave an already visible Full window's current sidebar selection alone.
+        if window?.isVisible != true && window?.attachedSheet == nil {
+            navigation.selectSidebar(.myTodos)
+        }
         todoStore.load()
         if resetsDateOnNextShow { todoStore.model?.openFullToday(); resetsDateOnNextShow = false }
         todoStore.model?.refresh()

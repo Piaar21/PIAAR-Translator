@@ -16,11 +16,11 @@ struct TodoEditorView: View {
         self.model = model; _session = State(initialValue: initial)
     }
     var body: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            Text("할 일 수정").font(.headline)
+        VStack(alignment: .leading, spacing: WorkDesign.sectionSpacing) {
+            Text("할 일 수정").font(WorkDesign.title)
             TodoQuickInput(text: $session.draft.title, focusRevision: focusRevision, wantsFocus: true,
                            submit: save, cancel: { if !saving { dismiss() } },
-                           newShortcut: { focusRevision += 1 }, placeholder: "할 일을 적어보세요").frame(height: 25)
+                           newShortcut: { focusRevision += 1 }, placeholder: "할 일을 적어보세요").frame(height: WorkDesign.inputHeight)
             HStack(spacing: 6) {
                 Menu("그룹") {
                     Button("그룹 없음") { session.draft.groupID = nil }
@@ -61,7 +61,7 @@ struct TodoEditorView: View {
                             }
                             Text("할 일을 저장할 때 연동합니다.").font(.caption).foregroundStyle(.secondary)
                             Button("선택") { session.linkCalendar = true; calendarOpen = false }
-                        }.padding().frame(width: 260)
+                        }.padding(WorkDesign.padding).frame(width: 260)
                     }
             }.controlSize(.small)
             if let name = model.groups.first(where: { $0.id == session.draft.groupID })?.name {
@@ -78,7 +78,7 @@ struct TodoEditorView: View {
                     .keyboardShortcut(.defaultAction)
                     .disabled(!session.draft.hasTitle || saving)
             }
-        }.padding(22).frame(width: 380)
+        }.padding(WorkDesign.padding).frame(width: 380)
             .onAppear { DispatchQueue.main.async { focusRevision += 1 } }
             .interactiveDismissDisabled(saving)
             .alert("캘린더 연동", isPresented: Binding(get: { model.calendarError != nil }, set: { if !$0 { model.calendarError = nil } })) {
@@ -136,7 +136,7 @@ private struct TodoNewGroupView: View {
                 Spacer()
                 Button("추가", action: add).disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
-        }.padding(18).frame(width: 260).onAppear { focused = true }
+        }.padding(WorkDesign.padding).frame(width: 260).onAppear { focused = true }
     }
     private func add() { if let group = model.createFullGroup(name: name, colorHex: color) { created(group) } }
 }
@@ -160,7 +160,7 @@ private struct TodoWeekdayPicker: View {
                 Spacer()
                 Button("확인") { dismiss() }
             }
-        }.padding().frame(width: 290)
+        }.padding(WorkDesign.padding).frame(width: 290)
     }
 }
 
@@ -196,7 +196,7 @@ private struct TodoOptionalDeadlineView: View {
                     catch { self.error = error.localizedDescription }
                 }
             }
-        }.padding().frame(width: 280)
+        }.padding(WorkDesign.padding).frame(width: 280)
     }
 }
 
@@ -246,6 +246,6 @@ private struct TodoTimePicker: View {
                 Spacer()
                 Button("선택") { selection = time; dismiss() }
             }
-        }.padding().frame(width: 240)
+        }.padding(WorkDesign.padding).frame(width: 240)
     }
 }

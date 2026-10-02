@@ -1,4 +1,7 @@
 import XCTest
+import CloudKit
+import Combine
+import SwiftData
 import AppKit
 import Carbon.HIToolbox
 import Security
@@ -400,5 +403,77 @@ private actor ControlledTranslationService: TranslationService {
     func finishSuggestions() {
         suggestions?.resume(returning: ["late suggestion"])
         suggestions = nil
+    }
+}
+
+@MainActor private final class FakeCloudAccountService: CloudKitAccountChecking {
+    var response: Result<CloudAccountState, Error>
+    private(set) var calls = 0
+    init(_ response: Result<CloudAccountState, Error>) { self.response = response }
+    func accountState() async throws -> CloudAccountState { calls += 1; return try response.get() }
+}
+
+final class CloudAccountDiagnosticsTests: XCTestCase {
+    @MainActor func testAvailableMappingIsOnlyAccountPrerequisite() {
+        XCTAssertEqual(CloudKitAccountService.map(.available), .available)
+        XCTAssertTrue(CloudKitAccountService.map(.available).permitsPrivateDatabaseAccount)
+    }
+    @MainActor func testNoAccountMapping() { XCTAssertEqual(CloudKitAccountService.map(.noAccount), .noAccount) }
+    @MainActor func testRestrictedMapping() { XCTAssertEqual(CloudKitAccountService.map(.restricted), .restricted) }
+    @MainActor func testCouldNotDetermineMapping() { XCTAssertEqual(CloudKitAccountService.map(.couldNotDetermine), .couldNotDetermine) }
+    @MainActor func testTemporarilyUnavailableMapping() { XCTAssertEqual(CloudKitAccountService.map(.temporarilyUnavailable), .temporarilyUnavailable) }
+    @MainActor func testFutureStatusMapsSafely() throws {
+        let status = try XCTUnwrap(CKAccountStatus(rawValue: 999))
+        XCTAssertEqual(CloudKitAccountService.map(status), .unknown)
+        XCTAssertFalse(CloudAccountState.unknown.permitsPrivateDatabaseAccount)
+    }
+    @MainActor func testErrorPreservedAndRefreshRecovers() async {
+        let fake = FakeCloudAccountService(.failure(NSError(domain: "diagnostic", code: 1,
+            userInfo: [NSLocalizedDescriptionKey: "offline diagnostic"])))
+        let model = CloudAccountDiagnostics(service: fake)
+        XCTAssertEqual(fake.calls, 0); XCTAssertEqual(model.state, .notChecked)
+        await model.refresh()
+        XCTAssertEqual(model.state, .error(message: "offline diagnostic"))
+        XCTAssertFalse(model.isChecking)
+        fake.response = .success(.available)
+        await model.refresh()
+        XCTAssertEqual(model.state.label, "연결됨"); XCTAssertEqual(fake.calls, 2)
+    }
+    @MainActor func testAccountChangedNotificationRefreshesFakeOnly() async {
+        let fake = FakeCloudAccountService(.success(.noAccount))
+        let model = CloudAccountDiagnostics(service: fake)
+        let center = NotificationCenter()
+        await model.refresh()
+        model.startMonitoring(center: center)
+        model.startMonitoring(center: center)
+        fake.response = .success(.available)
+        let changed = expectation(description: "account state refreshed")
+        let observation = model.$state.dropFirst().sink { if $0 == .available { changed.fulfill() } }
+        center.post(name: .CKAccountChanged, object: nil)
+        await fulfillment(of: [changed], timeout: 2)
+        XCTAssertEqual(fake.calls, 2)
+        observation.cancel(); model.stopMonitoring()
+    }
+    @MainActor func testCloudFailureDoesNotPreventTodoOrMockCollaboration() async throws {
+        let fake = FakeCloudAccountService(.failure(NSError(domain: "offline", code: 1)))
+        let diagnostics = CloudAccountDiagnostics(service: fake)
+        await diagnostics.refresh()
+        let repo = SwiftDataTodoRepository(container: try TodoPersistence.makeContainer(inMemory: true))
+        let todo = try TodoViewModel(repository: repo)
+        todo.quickTitle = "local still works"
+        XCTAssertTrue(todo.submitTodayQuickEntry())
+        XCTAssertEqual(try repo.allTodos().count, 1)
+        let env = MockCollaborationEnvironment(seedReceivedTasks: false)
+        let workspace = CollaborationWorkspace(environment: env)
+        await workspace.friends.load()
+        workspace.friends.codeInput = "B3821K7M"
+        await workspace.friends.addFriend()
+        let friend = try XCTUnwrap(workspace.friends.friends.first)
+        let sent = await workspace.sharedTasks.sendNewTask(title: "mock still works", deadline: nil,
+            receiverID: friend.user.id, requestID: UUID())
+        XCTAssertTrue(sent); XCTAssertEqual(workspace.sharedTasks.sent.count, 1)
+        let room = await workspace.rooms.createRoom(name: "mock room", invited: [friend.user.id])
+        XCTAssertNotNil(room)
+        XCTAssertEqual(fake.calls, 1)
     }
 }
