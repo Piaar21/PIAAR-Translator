@@ -54,10 +54,11 @@ final class WorkWindowController: NSWindowController, NSWindowDelegate {
             navigation.selectSidebar(.myTodos)
         }
         todoStore.load()
-        if resetsDateOnNextShow { todoStore.model?.openFullToday(); resetsDateOnNextShow = false }
+        if resetsDateOnNextShow { todoStore.model?.openFullToday(); todoStore.serverTasks?.openToday(); resetsDateOnNextShow = false }
         todoStore.model?.refresh()
         if window?.attachedSheet == nil {
             todoStore.model?.prepareForQuickEntry(windowWasActive: window?.isKeyWindow == true)
+            if todoStore.serverTasks?.editor == nil { todoStore.serverTasks?.requestFocus() }
         }
         show()
     }
@@ -120,6 +121,14 @@ final class WorkWindowCoordinator {
         }
     }
     func showTodo() { showWork() }
+
+    func closeAll() {
+        for window in [miniController?.window, controller?.window].compactMap({ $0 }) {
+            if let sheet = window.attachedSheet { window.endSheet(sheet); sheet.orderOut(nil) }
+            window.orderOut(nil)
+        }
+        miniController = nil; controller = nil
+    }
 
     private func windowController() -> WorkWindowController {
         if let controller { return controller }

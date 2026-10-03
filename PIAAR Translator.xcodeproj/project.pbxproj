@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		00BAE658BDF3482AB5FE0F1D /* WorkRoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA58A45A7744659B61DDB1 /* WorkRoomsViewModel.swift */; };
+		00E60AC9E50F406C809139E8 /* PIAAR Translator/Features/Groups/GroupDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12A9937476A4685B3021109 /* PIAAR Translator/Features/Groups/GroupDomain.swift */; };
 		03A7A1FEBA704991B4C8E6D0 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FA1EE32204B758B597E9F /* FriendRepository.swift */; };
 		045CEACF5C954869BAC69B1E /* SharedTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4D3155BA349AFAE92F9F1 /* SharedTaskTests.swift */; };
 		0C605FCE1EB078CCB448332A /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */; };
+		12B8C1B6307B431CA03A5079 /* PIAAR TranslatorTests/RecurrenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0BC914612E494A91C8C3E7 /* PIAAR TranslatorTests/RecurrenceTests.swift */; };
 		168278CB4FF3B9425AB40FD2 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808446524397CAA5D62A899 /* TodoTests.swift */; };
+		192DDF1F66F94CBB8F9EF152 /* PIAAR Translator/Services/Supabase/SupabaseGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A198989291E423F8EB4C287 /* PIAAR Translator/Services/Supabase/SupabaseGroupRepository.swift */; };
 		1D901ADD6EC710C4F1154147 /* TodoPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */; };
 		1F3CC7931085FC2E2A975D47 /* TodoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */; };
+		2324BD494FD4407299EF33FD /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D397F35FA904221BFCF2759 /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist */; };
 		24A098F88075438586B9C4E9 /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306ACF6B56B74F9C96BBFD3F /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift */; };
 		251C24BE4CCF7434B89AF20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06491D92B9AB7FDD2809936 /* AppDelegate.swift */; };
 		2805C6C78C354C268281D76F /* FriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3CBACE1CFA4D308F28DE1B /* FriendTests.swift */; };
@@ -22,31 +26,54 @@
 		362AD9DADDAC4E2883A78572 /* WorkRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D55137CD44A9E967DE0A3 /* WorkRoomTests.swift */; };
 		3694789CA17D4459AB3AE721 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADC01DF7444698DEDDD87 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift */; };
 		3AF77432C462CD3D8E785AC0 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186566449599D9C9DC5A64A2 /* StatusBarController.swift */; };
+		3D287BC2576D454DB6BA4CF4 /* PIAAR Translator/Features/Profile/WorkUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F5F102EB647E3BA1DE321 /* PIAAR Translator/Features/Profile/WorkUser.swift */; };
 		3F74324BF6D9557F5E7D890E /* TranslatorLauncherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */; };
 		437FD1B3404F4A39E61F7E38 /* TodoWorkspaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */; };
+		46DB33C6730841E89A932D7B /* PIAAR Translator/Features/Tasks/LegacyRecurrenceSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF7F9CD1BC34D419973A44E /* PIAAR Translator/Features/Tasks/LegacyRecurrenceSnapshot.swift */; };
+		4A7023B46DFE4CB099E433E1 /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BB900C7074BFDB4B3589B /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.swift */; };
+		56C940A0CCE5423FBDAFD35D /* PIAAR Translator/Features/Auth/CollaborationAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72BD81B3654884AA947D36 /* PIAAR Translator/Features/Auth/CollaborationAccountView.swift */; };
+		58CEFE0187C44E30B3E6B514 /* PIAAR Translator/Services/Sync/CloudKitWorkUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ADBD00FE804646AFF0DE12 /* PIAAR Translator/Services/Sync/CloudKitWorkUserRepository.swift */; };
 		604D3A4E16454E648D273180 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55310B590028411C93A27A64 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift */; };
+		6C66D5A2D2534CBE90A72120 /* PIAAR Translator/Features/Profile/WorkUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BABB9D3795E4553BC977E4E /* PIAAR Translator/Features/Profile/WorkUserProfileViewModel.swift */; };
+		6E6225CC22B74BF1BFFA6018 /* PIAAR Translator/Features/Tasks/TaskDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C12C7DFB34083A762F1B0 /* PIAAR Translator/Features/Tasks/TaskDomain.swift */; };
+		71BC851693114CE0BEBB37E3 /* PIAAR Translator/Features/Tasks/LegacyMigrationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B2C1CCB5E54097B5327FDD /* PIAAR Translator/Features/Tasks/LegacyMigrationViews.swift */; };
+		745F74E3B4CB4793B19EE1B6 /* PIAAR Translator/Services/Supabase/SupabaseRecurrenceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C97CBA3FF84BAA8B50013D /* PIAAR Translator/Services/Supabase/SupabaseRecurrenceRepository.swift */; };
+		77463C7E1FC147C197F4D49A /* PIAAR Translator/Services/Supabase/SupabaseAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC7D04FD59F4F41BE1EFED2 /* PIAAR Translator/Services/Supabase/SupabaseAccountRepository.swift */; };
+		79B9F862441F40CAA31B94E0 /* PIAAR Translator/Features/Auth/AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12CC93E68649F0B4AEE0A1 /* PIAAR Translator/Features/Auth/AuthViewModel.swift */; };
+		7AF468E4287940D6B308102A /* PIAAR TranslatorTests/WorkUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4436A94FBB402E8816269D /* PIAAR TranslatorTests/WorkUserTests.swift */; };
+		7F8558EB323545CC96E3785B /* PIAAR Translator/Features/Tasks/TaskWorkspaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CDD95F034F4B4C9A0EE995 /* PIAAR Translator/Features/Tasks/TaskWorkspaceModel.swift */; };
 		82DCBA9EF5D660B573B61D1A /* DualHotKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */; };
+		85CF1356E8FB4B999F6F12CC /* PIAAR TranslatorTests/AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09BEAC21F144E7A65A5527 /* PIAAR TranslatorTests/AuthTests.swift */; };
 		87E2C8024D044BF7925773A8 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842057DFF29412F809DB931 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift */; };
 		93336F0871284D76AAFF79F5 /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CB6D638AD34561B632E6AA /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift */; };
 		947B6FE6C3804C0D89DFD5DF /* WorkRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4414B55414F17BD73AAB6 /* WorkRoomRepository.swift */; };
 		982ABB2CE1274210AD04F226 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53F5DA2D1B421B8CD61009 /* FriendsViewModel.swift */; };
+		98F03E65372C4D3BB111E392 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8D33A70BC03344339AF3B520 /* Supabase */; };
 		9AE977A575DB302AE2C6EAC1 /* HotKeySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */; };
 		9D08938F965D491F80E4CE4B /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CDA9D86AA044DDA713C592 /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift */; };
+		9D31C74A2AFB4BCB8ACE4BF1 /* PIAAR Translator/Features/Tasks/TaskRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3276F001D462597FB40A9 /* PIAAR Translator/Features/Tasks/TaskRecurrence.swift */; };
 		9E61CA25550DE94FC6F1A3A9 /* TodoNewShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */; };
 		A694E79797EC483E9C567199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5D950051D24D0AA816B001 /* FriendsView.swift */; };
 		A7388AA34C5340A0A90901ED /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC411AF35146C38098588B /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift */; };
 		B081E20C966450244958318D /* SwiftDataTodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */; };
 		B132D3A8B40D4C9EBD719983 /* PIAAR Translator/Models/TodoRepeatSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB26701C564E249E8391FF /* PIAAR Translator/Models/TodoRepeatSchedule.swift */; };
 		B5FEE56D2043412C8FFE232C /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F635D8491844C5B773CE8B /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift */; };
+		BB17D16CE74B4BDD81FF17FD /* PIAAR Translator/Features/Auth/AuthDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF0FD291987454CB55AD884 /* PIAAR Translator/Features/Auth/AuthDomain.swift */; };
+		BDA6151E5D234F468025B34D /* PIAAR Translator/Features/Profile/ReconciledWorkUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811EFAFE5B9642A08931346A /* PIAAR Translator/Features/Profile/ReconciledWorkUserRepository.swift */; };
+		BDA811BFC18E4B988FEEFFD7 /* PIAAR Translator/Features/Auth/ApplicationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977ED6C056DF4DEFAB371478 /* PIAAR Translator/Features/Auth/ApplicationSession.swift */; };
 		BDEAC717E8BF075AC3D0BB0E /* HotKeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */; };
 		BDF6250B0FB749DCB6C8F40D /* PIAAR Translator/App/WorkDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802F37F5DFB4834B0330E80 /* PIAAR Translator/App/WorkDesign.swift */; };
 		BF76D975A9B1C1F469E37727 /* TodoTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849412C993605CA3D3E7C40D /* TodoTypes.swift */; };
 		C07E3A33A2B14F93A43A2591 /* SharedTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94C8D9A06304965B1E81EC7 /* SharedTasksViewModel.swift */; };
+		C0924B00C8954E3CA9E6A7A3 /* PIAAR Translator/Features/Tasks/LegacyTaskMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D59E4F6C414B2BA50C7202 /* PIAAR Translator/Features/Tasks/LegacyTaskMigration.swift */; };
 		D2C7015B0F9D1AD55CB55047 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */; };
 		D4B0E32D2F0B17E64F56DD72 /* WorkWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */; };
+		DEB7B0CBE87742148B281A79 /* PIAAR Translator/Services/Supabase/SupabaseTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE988E3F026347B79E485EEE /* PIAAR Translator/Services/Supabase/SupabaseTaskRepository.swift */; };
 		E4CBDFE7F6DF4637A44F2EA1 /* SharedTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102C9E672AF442A984E7585 /* SharedTaskRepository.swift */; };
 		E97F87D66D1549E4BEA3145F /* SharedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4337AFCF0441C987DCCDC /* SharedTasksView.swift */; };
-		ECE3FA46B3514FD785A98D5A /* WorkRoomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886F2FF9C0745F8AABFCC01 /* WorkRoomViews.swift */; };
+		ED109BAA48D94420BF3791AA /* PIAAR TranslatorTests/ServerTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5150CAA7F98E4D118C43B252 /* PIAAR TranslatorTests/ServerTaskTests.swift */; };
+		ED4C9162B9DA46148A8CE438 /* PIAAR Translator/Features/Tasks/ServerTaskViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A014ADCBBF4D6F9C3EB8B8 /* PIAAR Translator/Features/Tasks/ServerTaskViews.swift */; };
+		EDCE6B8767B241878ADBF27C /* PIAAR Translator/Features/Tasks/TaskEventQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB688D387E47B4B3A3F0C0 /* PIAAR Translator/Features/Tasks/TaskEventQueue.swift */; };
 		EEC65DDA0202F42A7DECB3FD /* HotKeySettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */; };
 		EF4A89673062312700A700AB /* PIAAR_TranslatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */; };
 		EF4A89693062312700A700AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A89683062312700A700AB /* ContentView.swift */; };
@@ -60,8 +87,35 @@
 		EF92EB7530625F7F008F0A36 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92EB7430625F7F008F0A36 /* KeychainManager.swift */; };
 		EFC12C34306255E200AEEB34 /* GlobalHotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC12C33306255E200AEEB34 /* GlobalHotKeyManager.swift */; };
 		EFC12C36306259E800AEEB34 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC12C35306259E800AEEB34 /* LaunchAtLoginManager.swift */; };
+		F595FA2EA4A24060997E9FED /* PIAAR Translator/Features/Tasks/ServerTaskEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AAD582E4C49A0B7F0E3C3 /* PIAAR Translator/Features/Tasks/ServerTaskEditor.swift */; };
 		F62AE2781B6A6E9950CA504F /* WorkMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B744C52EB6A69E34464BA /* WorkMainView.swift */; };
-		FAE0AE89FF3B49BCB276CBAD /* CloudKitAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EB11C55BC4B839DB3404F; };
+		FAE0AE89FF3B49BCB276CBAD /* PIAAR Translator/Services/Sync/CloudKitAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EB11C55BC4B839DB3404F /* PIAAR Translator/Services/Sync/CloudKitAccountService.swift */; };
+		FE4252CE09004B5CB908CB45 /* PIAAR Translator/Features/Tasks/TaskCalendarLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E28F7E0501494691341BD9 /* PIAAR Translator/Features/Tasks/TaskCalendarLinks.swift */; };
+		0566B85076EB42789D17FEDD /* PIAAR Translator/Features/Tasks/TaskEditorControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16665B3AE7164551A6FAA0A0; };
+		AAC57B44062E47299B865FC1 /* Supabase in Frameworks (Tests) */ = {isa = PBXBuildFile; productRef = FE2E798945B44954A4DA67A2 /* Supabase */; };
+		E0E85E5824B44C42958462C0 /* PIAAR Translator/Features/Tasks/TaskPresentationSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A39A1BD7E42228C719BB6; };
+		E5BD901FF5FB47119FB56F4E /* PIAAR Translator/Features/Tasks/MigrationDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C1CA0B3104BA6A6E0735B; };
+		DC16544D82F44A138CA6582C /* PIAAR Translator/Features/Friends/FriendshipDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47655AAB92614AF3951DC57B; };
+		2D75A631620C43909D5E2303 /* PIAAR Translator/Features/Friends/ServerFriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DCD3BD71544F6B52DADB7; };
+		3C1D3E801C2C41039CAF9465 /* PIAAR Translator/Features/Friends/ServerFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6260FB18540E783915F88; };
+		0CA2222085A14F9E8733ED23 /* PIAAR Translator/Services/Supabase/SupabaseFriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058DFE86249487188360ED8; };
+		476C4BD03EAD41D99349F6F9 /* PIAAR Translator/Services/Supabase/SupabaseFriendTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFEFA376EE49FBADD4E654; };
+		02C6A706884C46FB8F57304F /* PIAAR TranslatorTests/ServerFriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD860A67094330B236134F; };
+		6C00C1D75F914359882394AD /* PIAAR Translator/Features/Tasks/DirectTaskDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125274AC7D3B4666978FDA76; };
+		DB1176C9E320473488D1C796 /* PIAAR Translator/Features/Tasks/DirectTaskViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7293772192774F1DA1D62ADB; };
+		75C473D861F540508E741EF0 /* PIAAR Translator/Features/Spaces/SpaceDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD432E7D302141CFA585EBFA; };
+		39528D0BA72F4CC3946A7E3C /* PIAAR Translator/Features/Spaces/SpaceDirectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C67250F79845AC87DDBA0D; };
+		7ED4B280DEC54425A7767BD0 /* PIAAR Translator/Features/Spaces/SpaceViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909CBFC901E40B3AE0AC258; };
+		8C068C599F87445D861C949A /* PIAAR Translator/Services/Supabase/SupabaseSpaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13563BD3C1A84B73A17C7C2E; };
+		5F77E2F8E2794A6EA940DA20 /* PIAAR TranslatorTests/SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D24A1891442C393BF99A0; };
+		07D4189617204ED4BFC70882 /* PIAAR Translator/Features/Tasks/QuickAddParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760BAA247DB14675804B243C; };
+		AF8918A929CB4604B68862F6 /* PIAAR Translator/Features/Tasks/QuickAddPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F582F8CD141EAA6CA94CA; };
+		107386EBCB3F49B981BB5E26 /* PIAAR TranslatorTests/QuickAddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94829F99B3494AA98923BF; };
+		7E6033E38BA84CE4A38B3177 /* PIAAR TranslatorTests/DeferredTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB8FC2D2B247FF86D4A9E0; };
+		02298CBC91CC498B88CDFB9E /* PIAAR Translator/Features/Tasks/TaskScheduleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EB53F01F8415AA9741A85; };
+		63E960AE42C94954AE41520E /* PIAAR Translator/Services/Supabase/SupabaseTaskScheduleTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB24A74A07E40819BD8315B; };
+		115770AFA93845479C13C476 /* PIAAR Translator/Features/Tasks/DeferredTaskOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23D03807964393823B5FA0; };
+		D67D54EE741E461991BE0502 /* PIAAR TranslatorTests/TaskScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C677A6F624A72935142A3; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,37 +131,64 @@
 /* Begin PBXFileReference section */
 		02F635D8491844C5B773CE8B /* PIAAR Translator/Features/Todo/MissedTodoPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/MissedTodoPresentation.swift"; sourceTree = SOURCE_ROOT; };
 		055D2BC5BDF764B506F8EEDC /* TodoPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPersistence.swift; sourceTree = "<group>"; };
+		071AAD582E4C49A0B7F0E3C3 /* PIAAR Translator/Features/Tasks/ServerTaskEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/ServerTaskEditor.swift"; sourceTree = SOURCE_ROOT; };
+		07ADBD00FE804646AFF0DE12 /* PIAAR Translator/Services/Sync/CloudKitWorkUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Sync/CloudKitWorkUserRepository.swift"; sourceTree = SOURCE_ROOT; };
 		0802F37F5DFB4834B0330E80 /* PIAAR Translator/App/WorkDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/App/WorkDesign.swift"; sourceTree = SOURCE_ROOT; };
 		0A89C3CB1B960175F88F380D /* TodoNewShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoNewShortcut.swift; sourceTree = "<group>"; };
 		186566449599D9C9DC5A64A2 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		1BA4414B55414F17BD73AAB6 /* WorkRoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomRepository.swift; sourceTree = "<group>"; };
+		1BABB9D3795E4553BC977E4E /* PIAAR Translator/Features/Profile/WorkUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Profile/WorkUserProfileViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		1E5D950051D24D0AA816B001 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		21CDA9D86AA044DDA713C592 /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Platform/macOS/TodoCalendarService.swift"; sourceTree = SOURCE_ROOT; };
+		249C12C7DFB34083A762F1B0 /* PIAAR Translator/Features/Tasks/TaskDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskDomain.swift"; sourceTree = SOURCE_ROOT; };
+		26CDD95F034F4B4C9A0EE995 /* PIAAR Translator/Features/Tasks/TaskWorkspaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskWorkspaceModel.swift"; sourceTree = SOURCE_ROOT; };
+		2FF7F9CD1BC34D419973A44E /* PIAAR Translator/Features/Tasks/LegacyRecurrenceSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/LegacyRecurrenceSnapshot.swift"; sourceTree = SOURCE_ROOT; };
 		306ACF6B56B74F9C96BBFD3F /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodoRowView.swift"; sourceTree = SOURCE_ROOT; };
 		3210BFFDB7C7B3C5F59A52B9 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		32EB26701C564E249E8391FF /* PIAAR Translator/Models/TodoRepeatSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Models/TodoRepeatSchedule.swift"; sourceTree = SOURCE_ROOT; };
 		3842057DFF29412F809DB931 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/FullTodoView.swift"; sourceTree = SOURCE_ROOT; };
 		398186744B8EBF07CF9AE965 /* HotKeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyRecorderView.swift; sourceTree = "<group>"; };
+		4A198989291E423F8EB4C287 /* PIAAR Translator/Services/Supabase/SupabaseGroupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseGroupRepository.swift"; sourceTree = SOURCE_ROOT; };
+		4DDB688D387E47B4B3A3F0C0 /* PIAAR Translator/Features/Tasks/TaskEventQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskEventQueue.swift"; sourceTree = SOURCE_ROOT; };
 		4DFC411AF35146C38098588B /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodoEditorView.swift"; sourceTree = SOURCE_ROOT; };
 		4F3CBACE1CFA4D308F28DE1B /* FriendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTests.swift; sourceTree = "<group>"; };
 		5102C9E672AF442A984E7585 /* SharedTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTaskRepository.swift; sourceTree = "<group>"; };
+		5150CAA7F98E4D118C43B252 /* PIAAR TranslatorTests/ServerTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/ServerTaskTests.swift"; sourceTree = SOURCE_ROOT; };
 		55310B590028411C93A27A64 /* PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Platform/macOS/MiniTodoWindowController.swift"; sourceTree = SOURCE_ROOT; };
+		5D397F35FA904221BFCF2759 /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist"; sourceTree = SOURCE_ROOT; };
+		635EB11C55BC4B839DB3404F /* PIAAR Translator/Services/Sync/CloudKitAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Sync/CloudKitAccountService.swift"; sourceTree = SOURCE_ROOT; };
+		6B72BD81B3654884AA947D36 /* PIAAR Translator/Features/Auth/CollaborationAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Auth/CollaborationAccountView.swift"; sourceTree = SOURCE_ROOT; };
+		6BC7D04FD59F4F41BE1EFED2 /* PIAAR Translator/Services/Supabase/SupabaseAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseAccountRepository.swift"; sourceTree = SOURCE_ROOT; };
+		6F3BB900C7074BFDB4B3589B /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseConfiguration.swift"; sourceTree = SOURCE_ROOT; };
 		734B744C52EB6A69E34464BA /* WorkMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkMainView.swift; sourceTree = "<group>"; };
+		77C97CBA3FF84BAA8B50013D /* PIAAR Translator/Services/Supabase/SupabaseRecurrenceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseRecurrenceRepository.swift"; sourceTree = SOURCE_ROOT; };
 		7808446524397CAA5D62A899 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
 		7B504BC43E9D087E8D116977 /* TodoWorkspaceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWorkspaceStore.swift; sourceTree = "<group>"; };
+		811EFAFE5B9642A08931346A /* PIAAR Translator/Features/Profile/ReconciledWorkUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Profile/ReconciledWorkUserRepository.swift"; sourceTree = SOURCE_ROOT; };
 		82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualHotKeyTests.swift; sourceTree = "<group>"; };
 		849412C993605CA3D3E7C40D /* TodoTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTypes.swift; sourceTree = "<group>"; };
 		84F4337AFCF0441C987DCCDC /* SharedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTasksView.swift; sourceTree = "<group>"; };
-		8886F2FF9C0745F8AABFCC01 /* WorkRoomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomViews.swift; sourceTree = "<group>"; };
 		88B4D3155BA349AFAE92F9F1 /* SharedTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTaskTests.swift; sourceTree = "<group>"; };
+		8AF0FD291987454CB55AD884 /* PIAAR Translator/Features/Auth/AuthDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Auth/AuthDomain.swift"; sourceTree = SOURCE_ROOT; };
+		8D0BC914612E494A91C8C3E7 /* PIAAR TranslatorTests/RecurrenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/RecurrenceTests.swift"; sourceTree = SOURCE_ROOT; };
+		8E09BEAC21F144E7A65A5527 /* PIAAR TranslatorTests/AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/AuthTests.swift"; sourceTree = SOURCE_ROOT; };
 		9341E48201493BEFBD43BCD1 /* SwiftDataTodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTodoRepository.swift; sourceTree = "<group>"; };
+		977ED6C056DF4DEFAB371478 /* PIAAR Translator/Features/Auth/ApplicationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Auth/ApplicationSession.swift"; sourceTree = SOURCE_ROOT; };
 		9A8C297A3A6CB2ED1CB82B25 /* WorkWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWindowController.swift; sourceTree = "<group>"; };
+		9D4F5F102EB647E3BA1DE321 /* PIAAR Translator/Features/Profile/WorkUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Profile/WorkUser.swift"; sourceTree = SOURCE_ROOT; };
 		A0F8B21836F6FBC976A623C2 /* HotKeySettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeySettingsWindowController.swift; sourceTree = "<group>"; };
+		A6B2C1CCB5E54097B5327FDD /* PIAAR Translator/Features/Tasks/LegacyMigrationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/LegacyMigrationViews.swift"; sourceTree = SOURCE_ROOT; };
+		AB4436A94FBB402E8816269D /* PIAAR TranslatorTests/WorkUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/WorkUserTests.swift"; sourceTree = SOURCE_ROOT; };
 		AF5FA1EE32204B758B597E9F /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		B12A9937476A4685B3021109 /* PIAAR Translator/Features/Groups/GroupDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Groups/GroupDomain.swift"; sourceTree = SOURCE_ROOT; };
 		B28D55137CD44A9E967DE0A3 /* WorkRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomTests.swift; sourceTree = "<group>"; };
+		B2E28F7E0501494691341BD9 /* PIAAR Translator/Features/Tasks/TaskCalendarLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskCalendarLinks.swift"; sourceTree = SOURCE_ROOT; };
+		B3A014ADCBBF4D6F9C3EB8B8 /* PIAAR Translator/Features/Tasks/ServerTaskViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/ServerTaskViews.swift"; sourceTree = SOURCE_ROOT; };
 		B3B6DA51FCEE8A9DBB263B96 /* TodoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoGroup.swift; sourceTree = "<group>"; };
 		BA53F5DA2D1B421B8CD61009 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		C0DA58A45A7744659B61DDB1 /* WorkRoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkRoomsViewModel.swift; sourceTree = "<group>"; };
+		C3B3276F001D462597FB40A9 /* PIAAR Translator/Features/Tasks/TaskRecurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskRecurrence.swift"; sourceTree = SOURCE_ROOT; };
+		C3D59E4F6C414B2BA50C7202 /* PIAAR Translator/Features/Tasks/LegacyTaskMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/LegacyTaskMigration.swift"; sourceTree = SOURCE_ROOT; };
 		C66ADC01DF7444698DEDDD87 /* PIAAR Translator/Features/Todo/Views/TodayTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/Views/TodayTodoView.swift"; sourceTree = SOURCE_ROOT; };
 		C94C8D9A06304965B1E81EC7 /* SharedTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTasksViewModel.swift; sourceTree = "<group>"; };
 		CCED06560AA6472C988619F1 /* MockCollaborationEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollaborationEnvironment.swift; sourceTree = "<group>"; };
@@ -115,6 +196,7 @@
 		D649E9C51AF30373FA0F3E31 /* HotKeySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeySettingsView.swift; sourceTree = "<group>"; };
 		D82BD164EC914B1A1CF57EC3 /* TranslatorLauncherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorLauncherView.swift; sourceTree = "<group>"; };
 		DBBE48DBBCE75AFCFDC72C4D /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		DE12CC93E68649F0B4AEE0A1 /* PIAAR Translator/Features/Auth/AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Auth/AuthViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		E8CB6D638AD34561B632E6AA /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Todo/TodoManagementTypes.swift"; sourceTree = SOURCE_ROOT; };
 		EF4A89633062312700A700AB /* PIAAR Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PIAAR Translator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4A89663062312700A700AB /* PIAAR_TranslatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIAAR_TranslatorApp.swift; sourceTree = "<group>"; };
@@ -132,7 +214,31 @@
 		EF92EB7430625F7F008F0A36 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		EFC12C33306255E200AEEB34 /* GlobalHotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKeyManager.swift; sourceTree = "<group>"; };
 		EFC12C35306259E800AEEB34 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
-		635EB11C55BC4B839DB3404F /* CloudKitAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Sync/CloudKitAccountService.swift"; sourceTree = SOURCE_ROOT; };
+		FE988E3F026347B79E485EEE /* PIAAR Translator/Services/Supabase/SupabaseTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseTaskRepository.swift"; sourceTree = SOURCE_ROOT; };
+		16665B3AE7164551A6FAA0A0 /* PIAAR Translator/Features/Tasks/TaskEditorControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskEditorControls.swift"; sourceTree = SOURCE_ROOT; };
+		EA9A39A1BD7E42228C719BB6 /* PIAAR Translator/Features/Tasks/TaskPresentationSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskPresentationSorter.swift"; sourceTree = SOURCE_ROOT; };
+		EE9C1CA0B3104BA6A6E0735B /* PIAAR Translator/Features/Tasks/MigrationDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/MigrationDiagnostics.swift"; sourceTree = SOURCE_ROOT; };
+		47655AAB92614AF3951DC57B /* PIAAR Translator/Features/Friends/FriendshipDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Friends/FriendshipDomain.swift"; sourceTree = SOURCE_ROOT; };
+		6B8DCD3BD71544F6B52DADB7 /* PIAAR Translator/Features/Friends/ServerFriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Friends/ServerFriendsViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		B9C6260FB18540E783915F88 /* PIAAR Translator/Features/Friends/ServerFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Friends/ServerFriendsView.swift"; sourceTree = SOURCE_ROOT; };
+		C058DFE86249487188360ED8 /* PIAAR Translator/Services/Supabase/SupabaseFriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseFriendRepository.swift"; sourceTree = SOURCE_ROOT; };
+		40FFEFA376EE49FBADD4E654 /* PIAAR Translator/Services/Supabase/SupabaseFriendTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseFriendTransport.swift"; sourceTree = SOURCE_ROOT; };
+		6BCD860A67094330B236134F /* PIAAR TranslatorTests/ServerFriendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/ServerFriendTests.swift"; sourceTree = SOURCE_ROOT; };
+		125274AC7D3B4666978FDA76 /* PIAAR Translator/Features/Tasks/DirectTaskDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/DirectTaskDelivery.swift"; sourceTree = SOURCE_ROOT; };
+		7293772192774F1DA1D62ADB /* PIAAR Translator/Features/Tasks/DirectTaskViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/DirectTaskViews.swift"; sourceTree = SOURCE_ROOT; };
+		DD432E7D302141CFA585EBFA /* PIAAR Translator/Features/Spaces/SpaceDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Spaces/SpaceDomain.swift"; sourceTree = SOURCE_ROOT; };
+		F7C67250F79845AC87DDBA0D /* PIAAR Translator/Features/Spaces/SpaceDirectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Spaces/SpaceDirectoryModel.swift"; sourceTree = SOURCE_ROOT; };
+		3909CBFC901E40B3AE0AC258 /* PIAAR Translator/Features/Spaces/SpaceViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Spaces/SpaceViews.swift"; sourceTree = SOURCE_ROOT; };
+		13563BD3C1A84B73A17C7C2E /* PIAAR Translator/Services/Supabase/SupabaseSpaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseSpaceRepository.swift"; sourceTree = SOURCE_ROOT; };
+		192D24A1891442C393BF99A0 /* PIAAR TranslatorTests/SpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/SpaceTests.swift"; sourceTree = SOURCE_ROOT; };
+		760BAA247DB14675804B243C /* PIAAR Translator/Features/Tasks/QuickAddParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/QuickAddParser.swift"; sourceTree = SOURCE_ROOT; };
+		B97F582F8CD141EAA6CA94CA /* PIAAR Translator/Features/Tasks/QuickAddPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/QuickAddPreview.swift"; sourceTree = SOURCE_ROOT; };
+		6B94829F99B3494AA98923BF /* PIAAR TranslatorTests/QuickAddTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/QuickAddTests.swift"; sourceTree = SOURCE_ROOT; };
+		40BB8FC2D2B247FF86D4A9E0 /* PIAAR TranslatorTests/DeferredTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/DeferredTaskTests.swift"; sourceTree = SOURCE_ROOT; };
+		8A6EB53F01F8415AA9741A85 /* PIAAR Translator/Features/Tasks/TaskScheduleCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/TaskScheduleCommand.swift"; sourceTree = SOURCE_ROOT; };
+		0FB24A74A07E40819BD8315B /* PIAAR Translator/Services/Supabase/SupabaseTaskScheduleTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Services/Supabase/SupabaseTaskScheduleTransport.swift"; sourceTree = SOURCE_ROOT; };
+		DA23D03807964393823B5FA0 /* PIAAR Translator/Features/Tasks/DeferredTaskOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR Translator/Features/Tasks/DeferredTaskOrganizer.swift"; sourceTree = SOURCE_ROOT; };
+		B42C677A6F624A72935142A3 /* PIAAR TranslatorTests/TaskScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PIAAR TranslatorTests/TaskScheduleTests.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F03E65372C4D3BB111E392 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC57B44062E47299B865FC1 /* Supabase in Frameworks (Tests) */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +300,7 @@
 				CF2AEDAA925E4F2DBED9C6EB /* WorkRooms */,
 				8B7564C6CB9F4DC984DCF52D /* SharedTasks */,
 				7DC011FAFD434D96BA5E92AE /* Friends */,
+				FEA455DBCF554F749147BB74 /* Profile */,
 				784B6D9316FBF2F253C8AE52 /* Todo */,
 				DC353CCCEBABE224B9709EDF /* Translator */,
 			);
@@ -201,7 +310,8 @@
 		4D8B7E206657EF4857939A85 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
-				635EB11C55BC4B839DB3404F /* CloudKitAccountService.swift */,
+				635EB11C55BC4B839DB3404F /* PIAAR Translator/Services/Sync/CloudKitAccountService.swift */,
+				07ADBD00FE804646AFF0DE12 /* PIAAR Translator/Services/Sync/CloudKitWorkUserRepository.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -301,7 +411,6 @@
 			children = (
 				1BA4414B55414F17BD73AAB6 /* WorkRoomRepository.swift */,
 				C0DA58A45A7744659B61DDB1 /* WorkRoomsViewModel.swift */,
-				8886F2FF9C0745F8AABFCC01 /* WorkRoomViews.swift */,
 				CCED06560AA6472C988619F1 /* MockCollaborationEnvironment.swift */,
 			);
 			path = WorkRooms;
@@ -341,6 +450,47 @@
 		EF4A895A3062312700A700AB = {
 			isa = PBXGroup;
 			children = (
+				B42C677A6F624A72935142A3 /* PIAAR TranslatorTests/TaskScheduleTests.swift */,
+				DA23D03807964393823B5FA0 /* PIAAR Translator/Features/Tasks/DeferredTaskOrganizer.swift */,
+				0FB24A74A07E40819BD8315B /* PIAAR Translator/Services/Supabase/SupabaseTaskScheduleTransport.swift */,
+				8A6EB53F01F8415AA9741A85 /* PIAAR Translator/Features/Tasks/TaskScheduleCommand.swift */,
+				40BB8FC2D2B247FF86D4A9E0 /* PIAAR TranslatorTests/DeferredTaskTests.swift */,
+				6B94829F99B3494AA98923BF /* PIAAR TranslatorTests/QuickAddTests.swift */,
+				B97F582F8CD141EAA6CA94CA /* PIAAR Translator/Features/Tasks/QuickAddPreview.swift */,
+				760BAA247DB14675804B243C /* PIAAR Translator/Features/Tasks/QuickAddParser.swift */,
+				192D24A1891442C393BF99A0 /* PIAAR TranslatorTests/SpaceTests.swift */,
+				13563BD3C1A84B73A17C7C2E /* PIAAR Translator/Services/Supabase/SupabaseSpaceRepository.swift */,
+				3909CBFC901E40B3AE0AC258 /* PIAAR Translator/Features/Spaces/SpaceViews.swift */,
+				F7C67250F79845AC87DDBA0D /* PIAAR Translator/Features/Spaces/SpaceDirectoryModel.swift */,
+				DD432E7D302141CFA585EBFA /* PIAAR Translator/Features/Spaces/SpaceDomain.swift */,
+				7293772192774F1DA1D62ADB /* PIAAR Translator/Features/Tasks/DirectTaskViews.swift */,
+				125274AC7D3B4666978FDA76 /* PIAAR Translator/Features/Tasks/DirectTaskDelivery.swift */,
+				6BCD860A67094330B236134F /* PIAAR TranslatorTests/ServerFriendTests.swift */,
+				40FFEFA376EE49FBADD4E654 /* PIAAR Translator/Services/Supabase/SupabaseFriendTransport.swift */,
+				C058DFE86249487188360ED8 /* PIAAR Translator/Services/Supabase/SupabaseFriendRepository.swift */,
+				B9C6260FB18540E783915F88 /* PIAAR Translator/Features/Friends/ServerFriendsView.swift */,
+				6B8DCD3BD71544F6B52DADB7 /* PIAAR Translator/Features/Friends/ServerFriendsViewModel.swift */,
+				47655AAB92614AF3951DC57B /* PIAAR Translator/Features/Friends/FriendshipDomain.swift */,
+				EE9C1CA0B3104BA6A6E0735B /* PIAAR Translator/Features/Tasks/MigrationDiagnostics.swift */,
+				EA9A39A1BD7E42228C719BB6 /* PIAAR Translator/Features/Tasks/TaskPresentationSorter.swift */,
+				16665B3AE7164551A6FAA0A0 /* PIAAR Translator/Features/Tasks/TaskEditorControls.swift */,
+				8D0BC914612E494A91C8C3E7 /* PIAAR TranslatorTests/RecurrenceTests.swift */,
+				77C97CBA3FF84BAA8B50013D /* PIAAR Translator/Services/Supabase/SupabaseRecurrenceRepository.swift */,
+				2FF7F9CD1BC34D419973A44E /* PIAAR Translator/Features/Tasks/LegacyRecurrenceSnapshot.swift */,
+				C3B3276F001D462597FB40A9 /* PIAAR Translator/Features/Tasks/TaskRecurrence.swift */,
+				4DDB688D387E47B4B3A3F0C0 /* PIAAR Translator/Features/Tasks/TaskEventQueue.swift */,
+				5150CAA7F98E4D118C43B252 /* PIAAR TranslatorTests/ServerTaskTests.swift */,
+				A6B2C1CCB5E54097B5327FDD /* PIAAR Translator/Features/Tasks/LegacyMigrationViews.swift */,
+				071AAD582E4C49A0B7F0E3C3 /* PIAAR Translator/Features/Tasks/ServerTaskEditor.swift */,
+				B3A014ADCBBF4D6F9C3EB8B8 /* PIAAR Translator/Features/Tasks/ServerTaskViews.swift */,
+				C3D59E4F6C414B2BA50C7202 /* PIAAR Translator/Features/Tasks/LegacyTaskMigration.swift */,
+				B2E28F7E0501494691341BD9 /* PIAAR Translator/Features/Tasks/TaskCalendarLinks.swift */,
+				26CDD95F034F4B4C9A0EE995 /* PIAAR Translator/Features/Tasks/TaskWorkspaceModel.swift */,
+				249C12C7DFB34083A762F1B0 /* PIAAR Translator/Features/Tasks/TaskDomain.swift */,
+				B12A9937476A4685B3021109 /* PIAAR Translator/Features/Groups/GroupDomain.swift */,
+				4A198989291E423F8EB4C287 /* PIAAR Translator/Services/Supabase/SupabaseGroupRepository.swift */,
+				FE988E3F026347B79E485EEE /* PIAAR Translator/Services/Supabase/SupabaseTaskRepository.swift */,
+				977ED6C056DF4DEFAB371478 /* PIAAR Translator/Features/Auth/ApplicationSession.swift */,
 				306ACF6B56B74F9C96BBFD3F /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift */,
 				4DFC411AF35146C38098588B /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift */,
 				21CDA9D86AA044DDA713C592 /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift */,
@@ -391,14 +541,32 @@
 		EF4A89773062312900A700AB /* PIAAR TranslatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E09BEAC21F144E7A65A5527 /* PIAAR TranslatorTests/AuthTests.swift */,
 				82B0D12092F109FDF8C0C864 /* DualHotKeyTests.swift */,
 				7808446524397CAA5D62A899 /* TodoTests.swift */,
 				B28D55137CD44A9E967DE0A3 /* WorkRoomTests.swift */,
 				88B4D3155BA349AFAE92F9F1 /* SharedTaskTests.swift */,
 				4F3CBACE1CFA4D308F28DE1B /* FriendTests.swift */,
+				AB4436A94FBB402E8816269D /* PIAAR TranslatorTests/WorkUserTests.swift */,
 				EF4A89783062312900A700AB /* PIAAR_TranslatorTests.swift */,
 			);
 			path = "PIAAR TranslatorTests";
+			sourceTree = "<group>";
+		};
+		FEA455DBCF554F749147BB74 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5D397F35FA904221BFCF2759 /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist */,
+				6BC7D04FD59F4F41BE1EFED2 /* PIAAR Translator/Services/Supabase/SupabaseAccountRepository.swift */,
+				6F3BB900C7074BFDB4B3589B /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.swift */,
+				6B72BD81B3654884AA947D36 /* PIAAR Translator/Features/Auth/CollaborationAccountView.swift */,
+				DE12CC93E68649F0B4AEE0A1 /* PIAAR Translator/Features/Auth/AuthViewModel.swift */,
+				8AF0FD291987454CB55AD884 /* PIAAR Translator/Features/Auth/AuthDomain.swift */,
+				1BABB9D3795E4553BC977E4E /* PIAAR Translator/Features/Profile/WorkUserProfileViewModel.swift */,
+				9D4F5F102EB647E3BA1DE321 /* PIAAR Translator/Features/Profile/WorkUser.swift */,
+				811EFAFE5B9642A08931346A /* PIAAR Translator/Features/Profile/ReconciledWorkUserRepository.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +585,9 @@
 			dependencies = (
 			);
 			name = "PIAAR Translator";
+			packageProductDependencies = (
+				8D33A70BC03344339AF3B520 /* Supabase */,
+			);
 			productName = "PIAAR Translator";
 			productReference = EF4A89633062312700A700AB /* PIAAR Translator.app */;
 			productType = "com.apple.product-type.application";
@@ -435,6 +606,9 @@
 				EF4A89763062312900A700AB /* PBXTargetDependency */,
 			);
 			name = "PIAAR TranslatorTests";
+			packageProductDependencies = (
+				FE2E798945B44954A4DA67A2 /* Supabase */,
+			);
 			productName = "PIAAR TranslatorTests";
 			productReference = EF4A89743062312900A700AB /* PIAAR TranslatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -467,6 +641,9 @@
 				Base,
 			);
 			mainGroup = EF4A895A3062312700A700AB;
+			packageReferences = (
+				9B47C1FA5FB44224BB7161FF /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = EF4A89643062312700A700AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,6 +659,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2324BD494FD4407299EF33FD /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist in Resources */,
 				EF4A896F3062312900A700AB /* Preview Assets.xcassets in Resources */,
 				EF4A896B3062312900A700AB /* Assets.xcassets in Resources */,
 			);
@@ -501,6 +679,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115770AFA93845479C13C476 /* PIAAR Translator/Features/Tasks/DeferredTaskOrganizer.swift in Sources */,
+				63E960AE42C94954AE41520E /* PIAAR Translator/Services/Supabase/SupabaseTaskScheduleTransport.swift in Sources */,
+				02298CBC91CC498B88CDFB9E /* PIAAR Translator/Features/Tasks/TaskScheduleCommand.swift in Sources */,
+				AF8918A929CB4604B68862F6 /* PIAAR Translator/Features/Tasks/QuickAddPreview.swift in Sources */,
+				07D4189617204ED4BFC70882 /* PIAAR Translator/Features/Tasks/QuickAddParser.swift in Sources */,
+				8C068C599F87445D861C949A /* PIAAR Translator/Services/Supabase/SupabaseSpaceRepository.swift in Sources */,
+				7ED4B280DEC54425A7767BD0 /* PIAAR Translator/Features/Spaces/SpaceViews.swift in Sources */,
+				39528D0BA72F4CC3946A7E3C /* PIAAR Translator/Features/Spaces/SpaceDirectoryModel.swift in Sources */,
+				75C473D861F540508E741EF0 /* PIAAR Translator/Features/Spaces/SpaceDomain.swift in Sources */,
+				DB1176C9E320473488D1C796 /* PIAAR Translator/Features/Tasks/DirectTaskViews.swift in Sources */,
+				6C00C1D75F914359882394AD /* PIAAR Translator/Features/Tasks/DirectTaskDelivery.swift in Sources */,
+				476C4BD03EAD41D99349F6F9 /* PIAAR Translator/Services/Supabase/SupabaseFriendTransport.swift in Sources */,
+				0CA2222085A14F9E8733ED23 /* PIAAR Translator/Services/Supabase/SupabaseFriendRepository.swift in Sources */,
+				3C1D3E801C2C41039CAF9465 /* PIAAR Translator/Features/Friends/ServerFriendsView.swift in Sources */,
+				2D75A631620C43909D5E2303 /* PIAAR Translator/Features/Friends/ServerFriendsViewModel.swift in Sources */,
+				DC16544D82F44A138CA6582C /* PIAAR Translator/Features/Friends/FriendshipDomain.swift in Sources */,
+				E5BD901FF5FB47119FB56F4E /* PIAAR Translator/Features/Tasks/MigrationDiagnostics.swift in Sources */,
+				E0E85E5824B44C42958462C0 /* PIAAR Translator/Features/Tasks/TaskPresentationSorter.swift in Sources */,
+				0566B85076EB42789D17FEDD /* PIAAR Translator/Features/Tasks/TaskEditorControls.swift in Sources */,
+				745F74E3B4CB4793B19EE1B6 /* PIAAR Translator/Services/Supabase/SupabaseRecurrenceRepository.swift in Sources */,
+				46DB33C6730841E89A932D7B /* PIAAR Translator/Features/Tasks/LegacyRecurrenceSnapshot.swift in Sources */,
+				9D31C74A2AFB4BCB8ACE4BF1 /* PIAAR Translator/Features/Tasks/TaskRecurrence.swift in Sources */,
+				EDCE6B8767B241878ADBF27C /* PIAAR Translator/Features/Tasks/TaskEventQueue.swift in Sources */,
+				71BC851693114CE0BEBB37E3 /* PIAAR Translator/Features/Tasks/LegacyMigrationViews.swift in Sources */,
+				F595FA2EA4A24060997E9FED /* PIAAR Translator/Features/Tasks/ServerTaskEditor.swift in Sources */,
+				ED4C9162B9DA46148A8CE438 /* PIAAR Translator/Features/Tasks/ServerTaskViews.swift in Sources */,
+				C0924B00C8954E3CA9E6A7A3 /* PIAAR Translator/Features/Tasks/LegacyTaskMigration.swift in Sources */,
+				FE4252CE09004B5CB908CB45 /* PIAAR Translator/Features/Tasks/TaskCalendarLinks.swift in Sources */,
+				7F8558EB323545CC96E3785B /* PIAAR Translator/Features/Tasks/TaskWorkspaceModel.swift in Sources */,
+				6E6225CC22B74BF1BFFA6018 /* PIAAR Translator/Features/Tasks/TaskDomain.swift in Sources */,
+				00E60AC9E50F406C809139E8 /* PIAAR Translator/Features/Groups/GroupDomain.swift in Sources */,
+				192DDF1F66F94CBB8F9EF152 /* PIAAR Translator/Services/Supabase/SupabaseGroupRepository.swift in Sources */,
+				DEB7B0CBE87742148B281A79 /* PIAAR Translator/Services/Supabase/SupabaseTaskRepository.swift in Sources */,
+				BDA811BFC18E4B988FEEFFD7 /* PIAAR Translator/Features/Auth/ApplicationSession.swift in Sources */,
+				77463C7E1FC147C197F4D49A /* PIAAR Translator/Services/Supabase/SupabaseAccountRepository.swift in Sources */,
+				4A7023B46DFE4CB099E433E1 /* PIAAR Translator/Services/Supabase/SupabaseConfiguration.swift in Sources */,
+				56C940A0CCE5423FBDAFD35D /* PIAAR Translator/Features/Auth/CollaborationAccountView.swift in Sources */,
+				79B9F862441F40CAA31B94E0 /* PIAAR Translator/Features/Auth/AuthViewModel.swift in Sources */,
+				BB17D16CE74B4BDD81FF17FD /* PIAAR Translator/Features/Auth/AuthDomain.swift in Sources */,
 				1D901ADD6EC710C4F1154147 /* TodoPersistence.swift in Sources */,
 				B081E20C966450244958318D /* SwiftDataTodoRepository.swift in Sources */,
 				9E61CA25550DE94FC6F1A3A9 /* TodoNewShortcut.swift in Sources */,
@@ -523,7 +740,6 @@
 				F62AE2781B6A6E9950CA504F /* WorkMainView.swift in Sources */,
 				BDF6250B0FB749DCB6C8F40D /* PIAAR Translator/App/WorkDesign.swift in Sources */,
 				2A47BF67F37040E0BB023E93 /* MockCollaborationEnvironment.swift in Sources */,
-				ECE3FA46B3514FD785A98D5A /* WorkRoomViews.swift in Sources */,
 				00BAE658BDF3482AB5FE0F1D /* WorkRoomsViewModel.swift in Sources */,
 				947B6FE6C3804C0D89DFD5DF /* WorkRoomRepository.swift in Sources */,
 				E97F87D66D1549E4BEA3145F /* SharedTasksView.swift in Sources */,
@@ -544,7 +760,11 @@
 				24A098F88075438586B9C4E9 /* PIAAR Translator/Features/Todo/Views/TodoRowView.swift in Sources */,
 				A7388AA34C5340A0A90901ED /* PIAAR Translator/Features/Todo/Views/TodoEditorView.swift in Sources */,
 				9D08938F965D491F80E4CE4B /* PIAAR Translator/Platform/macOS/TodoCalendarService.swift in Sources */,
-				FAE0AE89FF3B49BCB276CBAD /* CloudKitAccountService.swift in Sources */,
+				FAE0AE89FF3B49BCB276CBAD /* PIAAR Translator/Services/Sync/CloudKitAccountService.swift in Sources */,
+				58CEFE0187C44E30B3E6B514 /* PIAAR Translator/Services/Sync/CloudKitWorkUserRepository.swift in Sources */,
+				BDA6151E5D234F468025B34D /* PIAAR Translator/Features/Profile/ReconciledWorkUserRepository.swift in Sources */,
+				3D287BC2576D454DB6BA4CF4 /* PIAAR Translator/Features/Profile/WorkUser.swift in Sources */,
+				6C66D5A2D2534CBE90A72120 /* PIAAR Translator/Features/Profile/WorkUserProfileViewModel.swift in Sources */,
 				87E2C8024D044BF7925773A8 /* PIAAR Translator/Features/Todo/Views/FullTodoView.swift in Sources */,
 				93336F0871284D76AAFF79F5 /* PIAAR Translator/Features/Todo/TodoManagementTypes.swift in Sources */,
 				B132D3A8B40D4C9EBD719983 /* PIAAR Translator/Models/TodoRepeatSchedule.swift in Sources */,
@@ -555,11 +775,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67D54EE741E461991BE0502 /* PIAAR TranslatorTests/TaskScheduleTests.swift in Sources */,
+				7E6033E38BA84CE4A38B3177 /* PIAAR TranslatorTests/DeferredTaskTests.swift in Sources */,
+				107386EBCB3F49B981BB5E26 /* PIAAR TranslatorTests/QuickAddTests.swift in Sources */,
+				5F77E2F8E2794A6EA940DA20 /* PIAAR TranslatorTests/SpaceTests.swift in Sources */,
+				02C6A706884C46FB8F57304F /* PIAAR TranslatorTests/ServerFriendTests.swift in Sources */,
+				12B8C1B6307B431CA03A5079 /* PIAAR TranslatorTests/RecurrenceTests.swift in Sources */,
+				ED109BAA48D94420BF3791AA /* PIAAR TranslatorTests/ServerTaskTests.swift in Sources */,
+				85CF1356E8FB4B999F6F12CC /* PIAAR TranslatorTests/AuthTests.swift in Sources */,
 				82DCBA9EF5D660B573B61D1A /* DualHotKeyTests.swift in Sources */,
 				168278CB4FF3B9425AB40FD2 /* TodoTests.swift in Sources */,
 				362AD9DADDAC4E2883A78572 /* WorkRoomTests.swift in Sources */,
 				045CEACF5C954869BAC69B1E /* SharedTaskTests.swift in Sources */,
 				2805C6C78C354C268281D76F /* FriendTests.swift in Sources */,
+				7AF468E4287940D6B308102A /* PIAAR TranslatorTests/WorkUserTests.swift in Sources */,
 				EF4A89793062312900A700AB /* PIAAR_TranslatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +933,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PIAAR Translator/App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "PIAAR Work";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -744,6 +974,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PIAAR Translator/App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "PIAAR Work";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -844,6 +1075,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B47C1FA5FB44224BB7161FF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.49.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D33A70BC03344339AF3B520 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B47C1FA5FB44224BB7161FF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		FE2E798945B44954A4DA67A2 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B47C1FA5FB44224BB7161FF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF4A895B3062312700A700AB /* Project object */;
 }

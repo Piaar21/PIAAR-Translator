@@ -1,24 +1,19 @@
 import SwiftUI
+import AppKit
 
 struct WorkMainView: View {
     @ObservedObject var navigation: WorkNavigationState
     @ObservedObject var todoStore: TodoWorkspaceStore
     let openTranslator: () -> Void
     let openSettings: () -> Void
-    @ObservedObject private var friendsModel: FriendsViewModel
-    @ObservedObject private var sharedTasks: SharedTasksViewModel
-    @ObservedObject private var workRooms: WorkRoomsViewModel
+    @ObservedObject private var account: AuthViewModel
     @State private var taskToSend: TodoSnapshot?
-    @State private var roomCreationNotice = false
 
     init(navigation: WorkNavigationState, todoStore: TodoWorkspaceStore,
          openTranslator: @escaping () -> Void, openSettings: @escaping () -> Void) {
         self.navigation = navigation; self.todoStore = todoStore
         self.openTranslator = openTranslator; self.openSettings = openSettings
-        let workspace = todoStore.collaboration
-        _friendsModel = ObservedObject(wrappedValue: workspace.friends)
-        _sharedTasks = ObservedObject(wrappedValue: workspace.sharedTasks)
-        _workRooms = ObservedObject(wrappedValue: workspace.rooms)
+        _account = ObservedObject(wrappedValue: todoStore.collaborationAccount)
     }
 
     var body: some View {
@@ -28,46 +23,55 @@ struct WorkMainView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(WorkDesign.contentBackground)
         }
+        .background {
+            if let model = todoStore.serverTasks {
+                TodoNewShortcut { navigation.selectSidebar(.myTodos); model.requestFocus() }.frame(width: 0, height: 0)
+            }
+        }
+        .background { if let directory = todoStore.serverSpaces { SpaceCreationPresenter(model: directory, open: { navigation.selectSidebar(.room($0)) }) } }
         .environment(\.workFullRows, true)
-        .task { todoStore.load(); await sharedTasks.load(); await workRooms.loadSidebar() }
+        .task { todoStore.load() }
+        .task { await account.start() }
+        .task { await todoStore.serverFriends?.refresh(); await todoStore.serverSpaces?.refresh() }
+        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
+            Task { await todoStore.serverFriends?.refresh(); await todoStore.serverSpaces?.refresh(); await todoStore.serverTasks?.refresh() }
+        }
         .frame(minWidth: 680, minHeight: 420)
         .sheet(item: $taskToSend) { todo in
-            SendTaskView(model: sharedTasks, todo: todo) { navigation.selectSidebar(.friends) }
+            CollaborationFeatureGate(account: account) {
+                if todoStore.serverTasks == nil { SendTaskView(model: todoStore.collaboration.sharedTasks, todo: todo) { navigation.selectSidebar(.friends) } }
+            }
         }
-        .sheet(isPresented: $roomCreationNotice) {
-            CreateWorkRoomView(model: workRooms) { navigation.selectSidebar(.room($0)) }
-        }
+
     }
 
     private var sidebar: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             VStack(alignment: .leading, spacing: 8) {
                 Text("PIAAR Work").font(.system(size: 16, weight: .semibold))
                     .padding(.horizontal, 12).padding(.top, 18).padding(.bottom, 10)
                 sidebarRow("내 할 일", symbol: "checkmark", selection: .myTodos)
                 sidebarRow("받은 업무", symbol: "arrow.down", selection: .receivedTasks,
-                           badge: sharedTasks.receivedIncompleteCount)
+                           badge: todoStore.serverTasks?.receivedIncompleteCount ?? 0)
                 sidebarRow("보낸 업무", symbol: "arrow.up", selection: .sentTasks)
-                Text("업무방").font(WorkDesign.secondary).foregroundStyle(.secondary)
-                    .padding(.horizontal, 12).padding(.top, 14)
-                if !workRooms.rooms.isEmpty {
+                HStack {
+                    Text("업무방").font(WorkDesign.secondary).foregroundStyle(.secondary)
+                    Spacer()
+                    Button { todoStore.serverSpaces?.beginCreating() } label: { Image(systemName: "plus").frame(width: 28, height: 28).contentShape(Rectangle()) }
+                        .buttonStyle(.plain).help("업무방 만들기").disabled(todoStore.serverSpaces == nil)
+                }.padding(.horizontal, 12).padding(.top, 14)
+                if let directory = todoStore.serverSpaces, !directory.spaces.isEmpty {
                     ScrollView(.vertical) {
                         VStack(spacing: 2) {
-                            ForEach(workRooms.rooms) { room in
-                                sidebarRow(room.name, selection: .room(room.id))
-                            }
+                            ForEach(directory.spaces) { space in sidebarRow(space.name, selection: .room(space.id)) }
                         }
-                    }.frame(height: min(200, max(0, geometry.size.height - 390), CGFloat(workRooms.rooms.count) * 36))
+                    }.frame(minHeight: 0, maxHeight: min(200, CGFloat(directory.spaces.count) * 36)).layoutPriority(-1)
+                } else {
+                    Text("아직 업무방이 없습니다.").font(.caption).foregroundStyle(.secondary).padding(.horizontal, 12)
                 }
-                Button { roomCreationNotice = true } label: {
-                    HStack(spacing: 8) {
-                        Image(systemName: "plus").foregroundStyle(Color.accentColor)
-                        Text("업무방 만들기")
-                    }.font(.system(size: 13)).frame(maxWidth: .infinity, minHeight: 34, alignment: .leading)
-                        .padding(.horizontal, 12).contentShape(Rectangle())
-                }.buttonStyle(.plain)
+                if let message = todoStore.serverSpaces?.errorMessage { Text(message).font(.caption).foregroundStyle(.secondary).lineLimit(2).padding(.horizontal, 12) }
                 Spacer(minLength: 6)
-                sidebarRow("친구", selection: .friends)
+                sidebarRow("친구", selection: .friends, badge: todoStore.serverFriends?.incoming.count ?? 0)
                 sidebarRow("내 프로필", selection: .profile)
             }.padding(.horizontal, 10).padding(.bottom, 14)
         }.background(WorkDesign.sidebarBackground)
@@ -96,21 +100,32 @@ struct WorkMainView: View {
         case .myTodos:
             todoContent
         case .receivedTasks:
-            SharedTasksView(model: sharedTasks, received: true)
+            if let model = todoStore.serverTasks { ServerTasksView(model: model, page: .received) }
+            else { CollaborationFeatureGate(account: account) { SharedTasksView(model: todoStore.collaboration.sharedTasks, received: true) } }
         case .sentTasks:
-            SharedTasksView(model: sharedTasks, received: false)
+            if let model = todoStore.serverTasks { ServerTasksView(model: model, page: .sent) }
+            else { CollaborationFeatureGate(account: account) { SharedTasksView(model: todoStore.collaboration.sharedTasks, received: false) } }
         case .room(let id):
-            WorkRoomView(model: workRooms, roomID: id) { navigation.selectSidebar(.myTodos) }
+            if let directory = todoStore.serverSpaces {
+                ServerTasksView(model: directory.model(id: id), closeSpace: { navigation.selectSidebar(.myTodos) }).id(id)
+                    .task(id: id) { await directory.refresh() }
+            } else { Text("업무방 정보를 사용할 수 없습니다.").foregroundStyle(.secondary) }
         case .profile:
-            ProfileView(model: friendsModel)
+            CollaborationAccountView(model: account)
         case .friends:
-            FriendsView(model: friendsModel, sharedTasks: sharedTasks)
+            if let friends = todoStore.serverFriends, let tasks = todoStore.serverTasks {
+                ServerFriendTasksView(friends: friends, tasks: tasks)
+            }
+            else if todoStore.serverTasks != nil { Text("친구 정보를 사용할 수 없습니다.").foregroundStyle(.secondary) }
+            else { CollaborationFeatureGate(account: account) { FriendsView(model: todoStore.collaboration.friends, sharedTasks: todoStore.collaboration.sharedTasks) } }
         }
     }
 
     @ViewBuilder private var todoContent: some View {
-        if let model = todoStore.model {
-            FullTodoView(model: model, sharedTasks: sharedTasks, sendTask: { taskToSend = $0 })
+        if let model = todoStore.serverTasks {
+            ServerTasksView(model: model, migration: todoStore.migration)
+        } else if let model = todoStore.model {
+            FullTodoView(model: model, sharedTasks: todoStore.collaboration.sharedTasks, sendTask: { taskToSend = $0 })
         } else if let error = todoStore.initializationError {
             VStack(alignment: .leading, spacing: 16) {
                 Label("Todo 저장소를 열 수 없습니다", systemImage: "exclamationmark.triangle")
@@ -160,4 +175,20 @@ enum WorkSidebarSelection: Hashable {
     case room(UUID)
     case friends
     case profile
+}
+
+// Observe the Task model here as well, so sheet completion and notices update on the friends page.
+private struct ServerFriendTasksView: View {
+    @ObservedObject var friends: ServerFriendsViewModel
+    @ObservedObject var tasks: TaskWorkspaceModel
+    var body: some View {
+        ServerFriendsView(sendTask: { tasks.beginDelivery(to: $0) }, deliveryNotice: tasks.deliveryNotice, model: friends)
+            .sheet(item: $tasks.delivery) { composer in DirectTaskSheet(model: composer, finished: { await tasks.deliveryFinished() }) }
+    }
+}
+
+private struct SpaceCreationPresenter: View {
+    @ObservedObject var model: SpaceDirectoryModel
+    let open: (UUID) -> Void
+    var body: some View { Color.clear.frame(width: 0, height: 0).sheet(isPresented: $model.creating) { CreateSpaceView(model: model, open: open) } }
 }

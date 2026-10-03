@@ -85,6 +85,7 @@ struct TodoQuickInput: NSViewRepresentable {
     let newShortcut: () -> Void
     var placeholder: String = "할 일 추가"
     var focusChanged: ((Bool) -> Void)? = nil
+    var submitContinuously: (() -> Void)? = nil
     @Environment(\.workFullRows) private var full
 
     func makeNSView(context: Context) -> TodoQuickInputNSView {
@@ -97,6 +98,7 @@ struct TodoQuickInput: NSViewRepresentable {
         view.focusChanged = focusChanged
         view.textChanged = { text = $0 }
         view.submit = submit
+        view.submitContinuously = submitContinuously
         view.cancel = cancel
         view.shortcut.action = newShortcut
         view.setText(text)
@@ -114,6 +116,7 @@ final class TodoQuickInputNSView: NSTextField, NSTextFieldDelegate {
     var textChanged: ((String) -> Void)?
     var focusChanged: ((Bool) -> Void)?
     var submit: (() -> Void)?
+    var submitContinuously: (() -> Void)?
     var cancel: (() -> Void)?
     private var focusRevision: Int?
     private var pendingFocusRevision: Int?
@@ -148,6 +151,11 @@ final class TodoQuickInputNSView: NSTextField, NSTextFieldDelegate {
     }
 
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
+        if window?.isKeyWindow == true, window?.attachedSheet == nil, hasKeyboardFocus,
+           [36, 76].contains(event.keyCode), event.modifierFlags.intersection([.command, .control, .option, .shift]) == .command,
+           let editor = currentEditor() as? NSTextView, !editor.hasMarkedText(), let submitContinuously {
+            submitContinuously(); return true
+        }
         guard let window, window.isKeyWindow, window.attachedSheet == nil,
               TodoShortcutNSView.isNewTodoShortcut(event) else {
             return super.performKeyEquivalent(with: event)
@@ -206,7 +214,9 @@ final class TodoQuickInputNSView: NSTextField, NSTextFieldDelegate {
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         switch commandSelector {
         case #selector(NSResponder.insertNewline(_:)):
-            submit?()
+            guard !textView.hasMarkedText() else { return false }
+            if NSApp.currentEvent?.modifierFlags.contains(.command) == true, let submitContinuously { submitContinuously() }
+            else { submit?() }
             return true
         case #selector(NSResponder.cancelOperation(_:)):
             pendingFocusRevision = nil

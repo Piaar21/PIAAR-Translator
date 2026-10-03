@@ -1,0 +1,8 @@
+# Local credentials and machine-specific files
+/PIAAR Translator/Services/Supabase/SupabaseConfiguration.plist
+.env
+.env.*
+!.env.example
+.DS_Store
+xcuserdata/
+*.xcuserstate

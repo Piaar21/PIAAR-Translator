@@ -193,7 +193,7 @@ final class FriendTests: XCTestCase {
         XCTAssertTrue(model.filteredFriends.isEmpty)
     }
 
-    @MainActor func testProfileSidebarIsDistinctAndSharesCurrentProfileModel() async throws {
+    @MainActor func testRealProfileSidebarIsSeparateFromMockCollaboration() async throws {
         let env = MockCollaborationEnvironment(seedReceivedTasks: false)
         let workspace = CollaborationWorkspace(environment: env)
         let navigation = WorkNavigationState()
@@ -201,18 +201,18 @@ final class FriendTests: XCTestCase {
         XCTAssertEqual(navigation.sidebarSelection, .profile)
         XCTAssertNotEqual(navigation.sidebarSelection, .friends)
         await workspace.friends.load()
-        let profileScreen = ProfileView(model: workspace.friends)
-        let friendScreen = FriendsView(model: workspace.friends, sharedTasks: workspace.sharedTasks)
-        XCTAssertTrue(profileScreen.model === friendScreen.model)
         let original = try XCTUnwrap(workspace.friends.profile)
-        let saved = await profileScreen.model.saveDisplayName("새 이름")
-        XCTAssertTrue(saved)
-        let stored = try await env.friends.currentProfile()
-        XCTAssertEqual(stored.displayName, "새 이름")
-        XCTAssertEqual(friendScreen.model.profile, stored)
-        XCTAssertEqual(stored.id, original.id)
-        XCTAssertEqual(stored.friendCode, original.friendCode)
-        XCTAssertEqual(stored.friendCode.displayValue, "#A3K8R21P")
+        let realRepo = SeparateProfileRepository()
+        let profile = WorkUserProfileViewModel(repository: realRepo)
+        let created = await profile.create("실제 이름"); XCTAssertTrue(created)
+        let renamed = await profile.rename("새 실제 이름"); XCTAssertTrue(renamed)
+        XCTAssertNotEqual(profile.user?.id, original.id)
+        XCTAssertEqual(profile.user?.displayName, "새 실제 이름")
+        XCTAssertEqual(profile.user?.displayedFriendCode, "#ZX123456")
+        let mock = try await env.friends.currentProfile()
+        XCTAssertEqual(mock, original)
+        XCTAssertEqual(workspace.friends.profile, original)
+        XCTAssertEqual(mock.friendCode.displayValue, "#A3K8R21P")
     }
 
     @MainActor func testFriendPlusFlowClosesAfterNormalizedAdditionAndKeepsSearch() async throws {
@@ -266,4 +266,20 @@ final class FriendTests: XCTestCase {
     func addFriend(code: FriendCode) async throws -> FriendEntry { throw FriendError.notFound }
     func removeFriend(id: UUID) async throws {}
     func updateDisplayName(_ name: String) async throws -> WorkUserSummary { user }
+}
+
+@MainActor private final class SeparateProfileRepository: WorkUserRepository {
+    var user: WorkUser?
+    func currentUser() async throws -> WorkUser? { user }
+    func create(displayName: String) async throws -> WorkUser {
+        let value = WorkUser(id: UUID(), displayName: try WorkUser.validName(displayName), friendCode: "ZX123456",
+                             createdAt: Date(), updatedAt: Date(), isActive: true)
+        user = value; return value
+    }
+    func updateDisplayName(_ name: String) async throws -> WorkUser {
+        let old = user!
+        let value = WorkUser(id: old.id, displayName: try WorkUser.validName(name), friendCode: old.friendCode,
+                             createdAt: old.createdAt, updatedAt: Date(), isActive: true)
+        user = value; return value
+    }
 }

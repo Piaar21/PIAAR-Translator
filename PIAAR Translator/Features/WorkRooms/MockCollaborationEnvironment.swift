@@ -22,11 +22,19 @@ import Foundation
     let sharedTasks: SharedTasksViewModel
     let rooms: WorkRoomsViewModel
 
-    init(environment: MockCollaborationEnvironment? = nil) {
+    convenience init(environment: MockCollaborationEnvironment? = nil) {
         let environment = environment ?? MockCollaborationEnvironment()
-        friends = FriendsViewModel(repository: environment.friends)
-        sharedTasks = SharedTasksViewModel(friends: environment.friends, tasks: environment.tasks, rooms: environment.rooms)
-        rooms = WorkRoomsViewModel(friends: environment.friends, rooms: environment.rooms,
-                                  tasks: environment.tasks, sharedTasks: sharedTasks)
+        self.init(friendRepository: environment.friends, taskRepository: environment.tasks,
+                  roomRepository: environment.rooms)
+    }
+
+    // Future backend adapters can be injected together without changing views or
+    // mixing real account IDs into only one part of the Mock collaboration world.
+    init(friendRepository: any FriendRepository, taskRepository: any SharedTaskRepository,
+         roomRepository: any WorkRoomRepository) {
+        friends = FriendsViewModel(repository: friendRepository)
+        sharedTasks = SharedTasksViewModel(friends: friendRepository, tasks: taskRepository, rooms: roomRepository)
+        rooms = WorkRoomsViewModel(friends: friendRepository, rooms: roomRepository,
+                                  tasks: taskRepository, sharedTasks: sharedTasks)
     }
 }

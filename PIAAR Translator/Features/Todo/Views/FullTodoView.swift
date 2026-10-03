@@ -79,7 +79,7 @@ enum TodoGroupColor {
         return Color(red: rgb.red, green: rgb.green, blue: rgb.blue, opacity: rgb.alpha)
     }
 }
-private struct TodoMonthView: View {
+struct TodoMonthView: View {
     @Binding var month: Date
     let selected: Date
     let today: Date
@@ -116,13 +116,14 @@ private struct TodoMonthView: View {
                                                         (calendar.isDate(date, inSameDayAs: today) ? Color.accentColor : Color.primary))
                                 Circle().fill(overdueDays.contains(calendar.startOfDay(for: date)) ? Color.red : Color.clear)
                                     .frame(width: 4, height: 4)
-                            }.frame(maxWidth: .infinity).frame(height: 30)
+                            }.frame(maxWidth: .infinity).frame(height: 44)
                                 .background(calendar.isDate(date, inSameDayAs: selected) ? Color.accentColor : Color.clear,
                                             in: RoundedRectangle(cornerRadius: 5))
+                                .contentShape(Rectangle())
                         }.buttonStyle(.plain)
                             .accessibilityLabel(date.formatted(date: .complete, time: .omitted))
                             .accessibilityValue(overdueDays.contains(calendar.startOfDay(for: date)) ? "미완료 할 일 있음" : "")
-                    } else { Color.clear.frame(height: 30) }
+                    } else { Color.clear.frame(height: 44) }
                 }
             }
         }

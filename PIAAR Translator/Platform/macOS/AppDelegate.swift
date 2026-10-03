@@ -12,10 +12,13 @@ final class AppDelegate:
     private var popupController:
         PopupWindowController?
 
+    private var applicationSession: ApplicationSession?
+
     private lazy var workWindows = WorkWindowCoordinator { [weak self] in
         WorkWindowController(
             openTranslator: { [weak self] in self?.showClipboardTranslator() },
-            openSettings: { HotKeySettingsWindowController.shared.show() }
+            openSettings: { HotKeySettingsWindowController.shared.show() },
+            todoStore: self?.applicationSession?.store
         )
     }
     private var statusBarController: StatusBarController?
@@ -46,6 +49,7 @@ final class AppDelegate:
 
 
         GlobalHotKeyManager.todoShared.onHotKeyPressed = { [weak self] in
+            guard self?.applicationSession?.allowAccess() == true else { return }
             self?.workWindows.handleTodoHotKey()
         }
         _ = GlobalHotKeyPair.shared.register()
@@ -57,6 +61,16 @@ final class AppDelegate:
             openSettings: { HotKeySettingsWindowController.shared.show() }
         )
 
+        let session = ApplicationSession.production()
+        applicationSession = session
+        session.onAccountChange = { [weak self] in
+            self?.workWindows.closeAll()
+            self?.popupController?.cancelPendingTranslation()
+            self?.popupController?.window?.orderOut(nil)
+            self?.popupController = nil
+        }
+        session.onLogin = { [weak self] in self?.showWork() }
+        session.start()
         requestAccessibilityPermissionIfNeeded()
     }
 
@@ -83,6 +97,7 @@ final class AppDelegate:
     // MARK: - Work Window
 
     private func showWork() {
+        guard applicationSession?.allowAccess() == true else { return }
         workWindows.showWork()
     }
 
@@ -95,7 +110,7 @@ final class AppDelegate:
 
     private func globalHotKeyPressed() {
 
-        guard !isHandlingHotKey else {
+        guard applicationSession?.allowAccess() == true, !isHandlingHotKey else {
             return
         }
 
@@ -104,8 +119,9 @@ final class AppDelegate:
             true
 
 
+        let requestScope = applicationSession?.store?.serverTasks
         Task { @MainActor in
-
+            guard applicationSession?.store?.serverTasks === requestScope else { isHandlingHotKey = false; return }
             defer {
                 isHandlingHotKey =
                     false
@@ -157,6 +173,7 @@ final class AppDelegate:
             }
 
 
+            guard applicationSession?.store?.serverTasks === requestScope else { return }
             let selection = TranslatorViewModel.copiedSelection(from: pasteboard, after: oldChangeCount)
             showTranslator(text: selection)
         }
@@ -235,6 +252,7 @@ final class AppDelegate:
 
     private func showTranslator(text: String?) {
 
+        guard applicationSession?.allowAccess() == true else { return }
         if popupController == nil {
 
             popupController =

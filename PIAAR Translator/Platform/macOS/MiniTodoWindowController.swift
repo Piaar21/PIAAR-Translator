@@ -31,7 +31,7 @@ final class MiniTodoWindowController: NSWindowController {
             window.makeFirstResponder(nil)
             self.navigation.toggle()
             window.title = self.navigation.page == .today ? "오늘 할 일" : "보낸 업무"
-            if self.navigation.page == .today { self.todoStore.model?.requestQuickFocus() }
+            if self.navigation.page == .today { self.todoStore.model?.requestQuickFocus(); self.todoStore.serverTasks?.requestFocus() }
             return nil
         }
     }
@@ -46,6 +46,7 @@ final class MiniTodoWindowController: NSWindowController {
         todoStore.load()
         todoStore.model?.refresh()
         todoStore.model?.requestQuickFocus()
+        todoStore.serverTasks?.openToday()
         window?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
         window?.makeKeyAndOrderFront(nil)
@@ -59,7 +60,9 @@ private struct MiniTodoRootView: View {
 
     var body: some View {
         Group {
-            if let model = store.model {
+            if let model = store.serverTasks {
+                ServerTasksView(model: model, page: navigation.page == .today ? .mine : .sent, mini: true, closeMini: close)
+            } else if let model = store.model {
                 if navigation.page == .today {
                     TodayTodoView(model: model, sharedTasks: store.collaboration.sharedTasks, isMini: true, closeMini: close)
                 } else {
