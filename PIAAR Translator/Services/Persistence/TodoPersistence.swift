@@ -3,6 +3,7 @@ import SwiftData
 
 // Frozen V1 model definitions preserve the original on-disk checksum.
 // Never edit V1 or recover from migration errors by deleting the store.
+@available(macOS 14.0, *)
 enum TodoSchemaV1: VersionedSchema {
     static var versionIdentifier = Schema.Version(1, 0, 0)
     static var models: [any PersistentModel.Type] { [TodoItem.self, TodoGroup.self] }
@@ -60,6 +61,7 @@ enum TodoSchemaV1: VersionedSchema {
 
 }
 
+@available(macOS 14.0, *)
 enum TodoSchemaV2: VersionedSchema {
     static var versionIdentifier = Schema.Version(2, 0, 0)
     static var models: [any PersistentModel.Type] { [TodoItem.self, TodoGroup.self, TodoRepeatSchedule.self] }
@@ -144,11 +146,13 @@ final class TodoRepeatSchedule {
 }
 
 }
+@available(macOS 14.0, *)
 enum TodoSchemaV3: VersionedSchema {
     static var versionIdentifier = Schema.Version(3, 0, 0)
     static var models: [any PersistentModel.Type] { [TodoItem.self, TodoGroup.self, TodoRepeatSchedule.self] }
 }
 
+@available(macOS 14.0, *)
 enum TodoMigrationPlan: SchemaMigrationPlan {
     static var schemas: [any VersionedSchema.Type] { [TodoSchemaV1.self, TodoSchemaV2.self, TodoSchemaV3.self] }
     static var stages: [MigrationStage] {
@@ -169,6 +173,7 @@ enum TodoPersistence {
             .appendingPathComponent(fileName)
     }
 
+    @available(macOS 14.0, *)
     @MainActor
     static func makeContainer(inMemory: Bool = false, storeURL: URL? = nil) throws -> ModelContainer {
         let schema = Schema(versionedSchema: TodoSchemaV3.self)

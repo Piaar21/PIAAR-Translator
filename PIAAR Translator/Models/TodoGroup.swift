@@ -1,6 +1,7 @@
 import Foundation
 import SwiftData
 
+@available(macOS 14.0, *)
 @Model
 final class TodoGroup {
     var id: UUID = UUID()

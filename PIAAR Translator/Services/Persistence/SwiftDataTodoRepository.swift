@@ -1,6 +1,7 @@
 import Foundation
 import SwiftData
 
+@available(macOS 14.0, *)
 @MainActor
 final class SwiftDataTodoRepository: TodoRepository {
     private let container: ModelContainer

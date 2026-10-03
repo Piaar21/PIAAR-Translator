@@ -15,6 +15,7 @@ struct LegacyTodoArchive {
 }
 @MainActor protocol LegacyTodoSource { func read() throws -> LegacyTodoArchive }
 // SwiftData opens and migrates only a SQLite backup, never the user's live archive.
+@available(macOS 14.0, *)
 @MainActor final class LegacySwiftDataTodoSource: LegacyTodoSource {
     private let overrideURL: URL?
     init(storeURL: URL? = nil) { overrideURL = storeURL }

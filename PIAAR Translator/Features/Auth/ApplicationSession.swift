@@ -33,11 +33,16 @@ import Combine
             let model = TaskWorkspaceModel(repository: tasks, groups: groups, events: events, actorDisplayName: { [weak auth] in auth?.profile?.displayName }, sessionFailure: { [weak auth] in auth?.requireLogin($0) }, recurrences: recurrences, friendships: friendRepository, spaces: spaces)
             model.calendarLinks = links
             model.calendarService = AppleTodoCalendarService()
-            let migration = LegacyTaskMigration(source: LegacySwiftDataTodoSource(), tasks: tasks, groups: groups, links: links, events: events, actorDisplayName: { [weak auth] in auth?.profile?.displayName }, recurrences: recurrences, validateSession: { [weak auth] expected in
+            let migration: LegacyTaskMigration?
+            if #available(macOS 14.0, *) {
+                migration = LegacyTaskMigration(source: LegacySwiftDataTodoSource(), tasks: tasks, groups: groups, links: links, events: events, actorDisplayName: { [weak auth] in auth?.profile?.displayName }, recurrences: recurrences, validateSession: { [weak auth] expected in
                 guard auth?.profile?.id == expected else { throw CollaborationAuthError.sessionMissing }
                 try await repository.requireOwner(expected)
                 guard auth?.profile?.id == expected else { throw CollaborationAuthError.sessionMissing }
             }, sessionFailure: { [weak auth] in auth?.requireLogin($0) })
+            } else {
+                migration = nil
+            }
             let friends = ServerFriendsViewModel(repository: friendRepository, sessionFailure: { [weak auth] in auth?.requireLogin($0) })
             let directory = SpaceDirectoryModel(repository: spaces, friendships: friendRepository, makeModel: { [weak model, weak auth] spaceID in
                 let scoped = TaskWorkspaceModel(repository: tasks, groups: groups, events: events,

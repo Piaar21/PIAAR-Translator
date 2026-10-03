@@ -25,7 +25,10 @@ final class TodoWorkspaceStore: ObservableObject {
         collaborationAccount = account ?? CollaborationAccountComposition.unconfiguredModel()
         self.serverSpaces = serverSpaces; self.serverTasks = serverTasks; self.migration = migration; self.serverFriends = serverFriends
         self.makeRepository = makeRepository ?? {
-            SwiftDataTodoRepository(container: try TodoPersistence.makeContainer())
+            if #available(macOS 14.0, *) {
+                return SwiftDataTodoRepository(container: try TodoPersistence.makeContainer())
+            }
+            throw TaskServiceError.unavailable
         }
         if let collaboration { self.collaboration = collaboration }
         spacesObservation = serverSpaces?.objectWillChange.sink { [weak self] _ in self?.objectWillChange.send() }

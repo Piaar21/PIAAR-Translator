@@ -3,6 +3,7 @@ import SwiftData
 
 // A persistent template, independent of the completion state of daily instances.
 // Scalar defaults and no uniqueness constraints permit a future CloudKit migration.
+@available(macOS 14.0, *)
 @Model
 final class TodoRepeatSchedule {
     var id: UUID = UUID()

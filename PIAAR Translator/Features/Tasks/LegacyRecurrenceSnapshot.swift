@@ -11,6 +11,7 @@ struct LegacyRecurrenceSnapshot {
     let deadlineDayOffset: Int?
     let startMinutes: Int?
     let deadlineMinutes: Int?
+    @available(macOS 14.0, *)
     init(_ model: TodoRepeatSchedule) {
         id = model.id; title = model.title; notes = model.notes; groupID = model.groupID
         weekdayMask = model.weekdayMask; beginsOn = model.beginsOn

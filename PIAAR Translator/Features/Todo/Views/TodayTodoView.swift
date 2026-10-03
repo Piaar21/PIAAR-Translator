@@ -66,7 +66,7 @@ struct TodayTodoView: View {
         .onReceive(refreshTimer) { _ in model.refresh() }
         .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in model.refresh() }
         .onReceive(NotificationCenter.default.publisher(for: .NSSystemTimeZoneDidChange)) { _ in model.refresh() }
-        .onChange(of: scenePhase) { _, phase in if phase == .active { model.refresh() } }
+        .onChange(of: scenePhase) { phase in if phase == .active { model.refresh() } }
     }
 
     private func cancelInput() {

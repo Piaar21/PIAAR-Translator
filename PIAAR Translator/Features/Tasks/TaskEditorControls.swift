@@ -51,7 +51,7 @@ struct TaskDatePicker: View {
                 Button("오늘") { choose(calendar.startOfDay(for: today)) }
             }.padding(16).frame(width: 330)
                 .environment(\.calendar, calendar).environment(\.timeZone, calendar.timeZone)
-        }.onChange(of: presentation.month) { _, value in monthChanged(value) }
+        }.onChange(of: presentation.month) { value in monthChanged(value) }
     }
     private func choose(_ date: Date) {
         presentation.choose(date)

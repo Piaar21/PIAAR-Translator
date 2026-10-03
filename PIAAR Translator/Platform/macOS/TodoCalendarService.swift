@@ -23,23 +23,38 @@ final class AppleTodoCalendarService: TodoCalendarService {
     private let store = EKEventStore()
 
     func requestAccess() async throws {
-        switch EKEventStore.authorizationStatus(for: .event) {
-        case .fullAccess: return
-        case .notDetermined, .writeOnly:
-            guard try await store.requestFullAccessToEvents() else { throw TodoManagementError.calendarDenied }
-        default: throw TodoManagementError.calendarDenied
+        if #available(macOS 14.0, *) {
+            switch EKEventStore.authorizationStatus(for: .event) {
+            case .fullAccess: return
+            case .notDetermined, .writeOnly:
+                guard try await store.requestFullAccessToEvents() else { throw TodoManagementError.calendarDenied }
+            default: throw TodoManagementError.calendarDenied
+            }
+        } else {
+            switch EKEventStore.authorizationStatus(for: .event) {
+            case .authorized: return
+            case .notDetermined:
+                guard try await store.requestAccess(to: .event) else { throw TodoManagementError.calendarDenied }
+            default: throw TodoManagementError.calendarDenied
+            }
         }
     }
 
+    private var hasCalendarAccess: Bool {
+        let status = EKEventStore.authorizationStatus(for: .event)
+        if #available(macOS 14.0, *) { return status == .fullAccess }
+        return status == .authorized
+    }
+
     func calendars() throws -> [TodoCalendarOption] {
-        guard EKEventStore.authorizationStatus(for: .event) == .fullAccess else { throw TodoManagementError.calendarDenied }
+        guard hasCalendarAccess else { throw TodoManagementError.calendarDenied }
         return store.calendars(for: .event).filter(\.allowsContentModifications)
             .map { TodoCalendarOption(id: $0.calendarIdentifier, title: $0.title) }
             .sorted { $0.title.localizedStandardCompare($1.title) == .orderedAscending }
     }
 
     func upsert(identifier: String?, calendarID: String?, title: String, start: Date, end: Date, isAllDay: Bool) throws -> TodoCalendarLink {
-        guard EKEventStore.authorizationStatus(for: .event) == .fullAccess else { throw TodoManagementError.calendarDenied }
+        guard hasCalendarAccess else { throw TodoManagementError.calendarDenied }
         guard end > start else { throw TodoManagementError.invalidTimeRange }
         let existing = identifier.flatMap { store.event(withIdentifier: $0) }
         let event = existing ?? EKEvent(eventStore: store)

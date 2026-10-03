@@ -1,6 +1,7 @@
 import Foundation
 import SwiftData
 
+@available(macOS 14.0, *)
 @Model
 final class TodoItem {
     // Defaults and optional relationships leave room for a future sync migration.

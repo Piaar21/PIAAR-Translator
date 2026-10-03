@@ -42,7 +42,7 @@ struct ServerTaskEditor: View {
                 TaskDatePicker(selection: Binding(get: { timing.date ?? day }, set: { timing.date = $0 }), calendar: model.calendar, label: "마감일")
                 TaskTimeRow(title: "시작 시간", selection: $timing.start, calendar: model.calendar, date: timing.date ?? day)
                 TaskTimeRow(title: "마감 시간", selection: $timing.end, calendar: model.calendar, date: timing.date ?? day)
-                Toggle("Calendar 연동", isOn: $linkCalendar).onChange(of: linkCalendar) { _, value in
+                Toggle("Calendar 연동", isOn: $linkCalendar).onChange(of: linkCalendar) { value in
                     guard value, let service = model.calendarService else { return }
                     Task { do { try await service.requestAccess(); calendars = try service.calendars() }
                            catch { self.error = error.localizedDescription; linkCalendar = false } }
@@ -60,7 +60,7 @@ struct ServerTaskEditor: View {
         }.padding(24).frame(width: 380).task {
             do { availableGroups = if let id = task.spaceID { try await model.groupRepository.groups(spaceID: id) } else { model.groups } }
             catch { self.error = "그룹을 불러오지 못했습니다." }
-        }.onChange(of: task) { _, latest in
+        }.onChange(of: task) { latest in
             isSomeday = latest.scheduledDate == nil
             day = latest.scheduledDate?.date(calendar: model.calendar) ?? model.today
         }.onAppear {

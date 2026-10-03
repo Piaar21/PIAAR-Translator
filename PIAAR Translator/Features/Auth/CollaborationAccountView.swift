@@ -65,7 +65,7 @@ struct CollaborationAccountView: View {
             .frame(maxWidth: .infinity, alignment: .top)
         }
             .onAppear { name = model.profile?.displayName ?? "" }
-            .onChange(of: model.profile?.displayName) { _, value in if let value { name = value } }
+            .onChange(of: model.profile?.displayName) { value in if let value { name = value } }
     }
 }
 

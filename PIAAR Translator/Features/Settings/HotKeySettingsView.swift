@@ -307,7 +307,8 @@ struct HotKeySettingsView: View {
             alignment:
                 .topLeading
         )
-        .onChange(of: recordingFeature) { oldValue, newValue in
+        .onChange(of: recordingFeature) { [recordingFeature] newValue in
+            let oldValue = recordingFeature
             if oldValue == nil, newValue != nil { GlobalHotKeyPair.shared.unregister() }
             if oldValue != nil, newValue == nil { GlobalHotKeyPair.shared.resumeAfterRecording() }
         }

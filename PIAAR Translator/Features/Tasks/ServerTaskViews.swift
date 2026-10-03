@@ -74,7 +74,7 @@ struct ServerTasksView: View {
             .task { await model.refresh() }
             .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in Task { await model.refresh() } }
             .onReceive(NotificationCenter.default.publisher(for: .NSSystemTimeZoneDidChange)) { _ in Task { await model.refresh() } }
-            .onChange(of: model.selectedDate) { _, _ in Task { await model.refresh() } }
+            .onChange(of: model.selectedDate) { _ in Task { await model.refresh() } }
             .sheet(isPresented: $organize) { DeferredTaskOrganizer(model: model) }
             .sheet(isPresented: $showMembers) { SpaceMembersView(model: model) }
             .alert("업무방 보관", isPresented: $confirmArchive) {
